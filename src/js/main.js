@@ -1,7 +1,16 @@
 import "../css/style.css";
 
-import codyLvl3 from "../assets/images/Cody3D/png/Sleep-Cody_3D.png";
+import codyLvl1 from "../assets/images/Cody3D/png/Dreaming-Cody_3D.png";
+import codyLvl2 from "../assets/images/Cody3D/png/Furious-Cody_3D.png";
+import codyLvl3 from "../assets/images/Cody3D/png/Angry-Cody_3D.png";
 import codyLvl4 from "../assets/images/Cody3D/png/Devil-Cody_3D.png";
+import codyLvl5 from "../assets/images/Cody3D/png/Surprised-Cody_3D.png";
+import codyLvl6 from "../assets/images/Cody3D/png/Poker-Cody_3D.png";
+import codyLvl7 from "../assets/images/Cody3D/png/Happy-Cody_3D.png";
+import codyLvl8 from "../assets/images/Cody3D/png/Smile-Cody_3D.png";
+import codyLvl9 from "../assets/images/Cody3D/png/Laugh-Cody_3D.png";
+import codyLvl10 from "../assets/images/Cody3D/png/Wink-Cody_3D.png";
+import codyLvl11 from "../assets/images/Cody3D/png/Heart-Cody_3D.png";
 
 // VAR GEN
 let scoreElement = document.getElementById("score");
@@ -34,33 +43,34 @@ cardPizzaElement.onclick = function () {
     score = score - costPizza;
     scoreElement.textContent = score;
     clicValue = clicValue + 1;
-  }
 
-  switch (lvlPizza) {
-    case 1:
-      costPizza = 10;
-      costPizzaElement.textContent = costPizza;
-      break;
-    case 2:
-      costPizza = 50;
-      costPizzaElement.textContent = costPizza;
-      break;
-    case 3:
-      costPizza = 100;
-      costPizzaElement.textContent = costPizza;
-      break;
-    case 4:
-      costPizza = 200;
-      costPizzaElement.textContent = costPizza;
-      break;
-    case 5:
-      costPizza = 500;
-      costPizzaElement.textContent = costPizza;
-      break;
-    case 6:
-      lvlPizzaElement.textContent = "MAX";
-      costPizzaElement.textContent = "-";
-      break;
+    switch (lvlPizza) {
+      case 1:
+        costPizza = 10;
+        costPizzaElement.textContent = costPizza;
+        break;
+      case 2:
+        costPizza = 50;
+        costPizzaElement.textContent = costPizza;
+        break;
+      case 3:
+        costPizza = 100;
+        costPizzaElement.textContent = costPizza;
+        break;
+      case 4:
+        costPizza = 200;
+        costPizzaElement.textContent = costPizza;
+        break;
+      case 5:
+        costPizza = 500;
+        costPizzaElement.textContent = costPizza;
+        break;
+      case 6:
+        lvlPizzaElement.textContent = "MAX";
+        costPizzaElement.textContent = "-";
+        codyImage.src = codyLvl1;
+        break;
+    }
   }
 };
 
@@ -81,33 +91,34 @@ cardBurgerElement.onclick = function () {
     score = score - costBurger;
     scoreElement.textContent = score;
     clicValue = clicValue + 2;
-  }
 
-  switch (lvlBurger) {
-    case 1:
-      costBurger = 100;
-      costBurgerElement.textContent = costBurger;
-      break;
-    case 2:
-      costBurger = 250;
-      costBurgerElement.textContent = costBurger;
-      break;
-    case 3:
-      costBurger = 500;
-      costBurgerElement.textContent = costBurger;
-      break;
-    case 4:
-      costBurger = 1000;
-      costBurgerElement.textContent = costBurger;
-      break;
-    case 5:
-      costBurger = 2500;
-      costBurgerElement.textContent = costBurger;
-      break;
-    case 6:
-      lvlBurgerElement.textContent = "MAX";
-      costBurgerElement.textContent = "-";
-      break;
+    switch (lvlBurger) {
+      case 1:
+        costBurger = 100;
+        costBurgerElement.textContent = costBurger;
+        break;
+      case 2:
+        costBurger = 250;
+        costBurgerElement.textContent = costBurger;
+        break;
+      case 3:
+        costBurger = 500;
+        costBurgerElement.textContent = costBurger;
+        break;
+      case 4:
+        costBurger = 1000;
+        costBurgerElement.textContent = costBurger;
+        break;
+      case 5:
+        costBurger = 2500;
+        costBurgerElement.textContent = costBurger;
+        break;
+      case 6:
+        lvlBurgerElement.textContent = "MAX";
+        costBurgerElement.textContent = "-";
+        codyImage.src = codyLvl2;
+        break;
+    }
   }
 };
 
@@ -128,34 +139,34 @@ cardCoffeeElement.onclick = function () {
     score = score - costCoffee;
     scoreElement.textContent = score;
     clicValue = clicValue + 5;
-  }
 
-  switch (lvlCoffee) {
-    case 1:
-      costCoffee = 500;
-      costCoffeeElement.textContent = costCoffee;
-      break;
-    case 2:
-      costCoffee = 1000;
-      costCoffeeElement.textContent = costCoffee;
-      break;
-    case 3:
-      costCoffee = 2500;
-      costCoffeeElement.textContent = costCoffee;
-      break;
-    case 4:
-      costCoffee = 5000;
-      costCoffeeElement.textContent = costCoffee;
-      break;
-    case 5:
-      costCoffee = 10000;
-      costCoffeeElement.textContent = costCoffee;
-      break;
-    case 6:
-      lvlCoffeeElement.textContent = "MAX";
-      costCoffeeElement.textContent = "-";
-      codyImage.src = codyLvl3;
-      break;
+    switch (lvlCoffee) {
+      case 1:
+        costCoffee = 500;
+        costCoffeeElement.textContent = costCoffee;
+        break;
+      case 2:
+        costCoffee = 1000;
+        costCoffeeElement.textContent = costCoffee;
+        break;
+      case 3:
+        costCoffee = 2500;
+        costCoffeeElement.textContent = costCoffee;
+        break;
+      case 4:
+        costCoffee = 5000;
+        costCoffeeElement.textContent = costCoffee;
+        break;
+      case 5:
+        costCoffee = 10000;
+        costCoffeeElement.textContent = costCoffee;
+        break;
+      case 6:
+        lvlCoffeeElement.textContent = "MAX";
+        costCoffeeElement.textContent = "-";
+        codyImage.src = codyLvl3;
+        break;
+    }
   }
 };
 
@@ -201,6 +212,7 @@ cardDorayakiElement.onclick = function () {
       case 6:
         lvlDorayakiElement.textContent = "MAX";
         costDorayakiElement.textContent = "-";
+        codyImage.src = codyLvl4;
         break;
     }
   }
@@ -247,6 +259,7 @@ cardFriesElement.onclick = function () {
       case 6:
         lvlFriesElement.textContent = "MAX";
         costFriesElement.textContent = "-";
+        codyImage.src = codyLvl5;
         break;
     }
   }
@@ -294,14 +307,15 @@ cardHotDogElement.onclick = function () {
       case 6:
         lvlHotDogElement.textContent = "MAX";
         costHotDogElement.textContent = "-";
+        codyImage.src = codyLvl6;
         break;
     }
   }
 };
 
-/// LEVEL 7-ICE CREALM
+/// LEVEL 7-ICE CREAM
 
-let cardIceCreamElement = document.getElementById("Card-ice");
+let cardIceCreamElement = document.getElementById("card-ice");
 let costIceCreamElement = document.getElementById("cost-ice");
 let costIceCream = 20000;
 let lvlIceCreamElement = document.getElementById("lvl-ice");
@@ -341,6 +355,7 @@ cardIceCreamElement.onclick = function () {
       case 6:
         lvlIceCreamElement.textContent = "MAX";
         costIceCreamElement.textContent = "-";
+        codyImage.src = codyLvl7;
         break;
     }
   }
@@ -363,33 +378,34 @@ cardKebabElement.onclick = function () {
     score = score - costKebab;
     scoreElement.textContent = score;
     clicValue = clicValue + 1000;
-  }
 
-  switch (lvlKebab) {
-    case 1:
-      costKebab = 200000;
-      costKebabElement.textContent = costKebab;
-      break;
-    case 2:
-      costKebab = 400000;
-      costKebabElement.textContent = costKebab;
-      break;
-    case 3:
-      costKebab = 800000;
-      costKebabElement.textContent = costKebab;
-      break;
-    case 4:
-      costKebab = 1600000;
-      costKebabElement.textContent = costKebab;
-      break;
-    case 5:
-      costKebab = 3200000;
-      costKebabElement.textContent = costKebab;
-      break;
-    case 6:
-      lvlKebabElement.textContent = "MAX";
-      costKebabElement.textContent = "-";
-      break;
+    switch (lvlKebab) {
+      case 1:
+        costKebab = 200000;
+        costKebabElement.textContent = costKebab;
+        break;
+      case 2:
+        costKebab = 400000;
+        costKebabElement.textContent = costKebab;
+        break;
+      case 3:
+        costKebab = 800000;
+        costKebabElement.textContent = costKebab;
+        break;
+      case 4:
+        costKebab = 1600000;
+        costKebabElement.textContent = costKebab;
+        break;
+      case 5:
+        costKebab = 3200000;
+        costKebabElement.textContent = costKebab;
+        break;
+      case 6:
+        lvlKebabElement.textContent = "MAX";
+        costKebabElement.textContent = "-";
+        codyImage.src = codyLvl8;
+        break;
+    }
   }
 };
 
@@ -410,33 +426,34 @@ cardMilkElement.onclick = function () {
     score = score - costMilk;
     scoreElement.textContent = score;
     clicValue = clicValue + 2000;
-  }
 
-  switch (lvlMilk) {
-    case 1:
-      costMilk = 1000000;
-      costMilkElement.textContent = costMilk;
-      break;
-    case 2:
-      costMilk = 2000000;
-      costKMilk;
-      break;
-    case 3:
-      costMilk = 4000000;
-      costMilkElement.textContent = costMilk;
-      break;
-    case 4:
-      costMilk = 8000000;
-      costMilkElement.textContent = costMilk;
-      break;
-    case 5:
-      costMilk = 16000000;
-      costMilkElement.textContent = costMilk;
-      break;
-    case 6:
-      lvlMilkElement.textContent = "MAX";
-      costMilkElement.textContent = "-";
-      break;
+    switch (lvlMilk) {
+      case 1:
+        costMilk = 1000000;
+        costMilkElement.textContent = costMilk;
+        break;
+      case 2:
+        costMilk = 2000000;
+        costKMilk;
+        break;
+      case 3:
+        costMilk = 4000000;
+        costMilkElement.textContent = costMilk;
+        break;
+      case 4:
+        costMilk = 8000000;
+        costMilkElement.textContent = costMilk;
+        break;
+      case 5:
+        costMilk = 16000000;
+        costMilkElement.textContent = costMilk;
+        break;
+      case 6:
+        lvlMilkElement.textContent = "MAX";
+        costMilkElement.textContent = "-";
+        codyImage.src = codyLvl9;
+        break;
+    }
   }
 };
 
@@ -457,33 +474,34 @@ cardMuffinElement.onclick = function () {
     score = score - costMuffin;
     scoreElement.textContent = score;
     clicValue = clicValue + 5000;
-  }
 
-  switch (lvlMuffin) {
-    case 1:
-      costMuffin = 5000000;
-      costMuffinElement.textContent = costMuffin;
-      break;
-    case 2:
-      costMuffin = 10000000;
-      costMuffinElement.textContent = costMuffin;
-      break;
-    case 3:
-      costMuffin = 20000000;
-      costMuffinElement.textContent = costMuffin;
-      break;
-    case 4:
-      costMuffin = 40000000;
-      costMuffinElement.textContent = costMuffin;
-      break;
-    case 5:
-      costMuffin = 80000000;
-      costMuffinElement.textContent = costMuffin;
-      break;
-    case 6:
-      lvlMuffinElement.textContent = "MAX";
-      costMuffinElement.textContent = "-";
-      break;
+    switch (lvlMuffin) {
+      case 1:
+        costMuffin = 5000000;
+        costMuffinElement.textContent = costMuffin;
+        break;
+      case 2:
+        costMuffin = 10000000;
+        costMuffinElement.textContent = costMuffin;
+        break;
+      case 3:
+        costMuffin = 20000000;
+        costMuffinElement.textContent = costMuffin;
+        break;
+      case 4:
+        costMuffin = 40000000;
+        costMuffinElement.textContent = costMuffin;
+        break;
+      case 5:
+        costMuffin = 80000000;
+        costMuffinElement.textContent = costMuffin;
+        break;
+      case 6:
+        lvlMuffinElement.textContent = "MAX";
+        costMuffinElement.textContent = "-";
+        codyImage.src = codyLvl10;
+        break;
+    }
   }
 };
 
@@ -504,32 +522,33 @@ cardSandwichElement.onclick = function () {
     score = score - costSandwich;
     scoreElement.textContent = score;
     clicValue = clicValue + 50000;
-  }
 
-  switch (lvlSandwich) {
-    case 1:
-      costSandwich = 100000000;
-      costSandwichElement.textContent = costSandwich;
-      break;
-    case 2:
-      costSandwich = 1000000000;
-      costSandwichElement.textContent = costSandwich;
-      break;
-    case 3:
-      costSandwich = 10000000000;
-      costSandwichElement.textContent = costSandwich;
-      break;
-    case 4:
-      costSandwich = 100000000000;
-      costSandwichElement.textContent = costSandwich;
-      break;
-    case 5:
-      costSandwich = 1000000000000;
-      costSandwichElement.textContent = costSandwich;
-      break;
-    case 6:
-      lvlSandwichElement.textContent = "MAX";
-      costSandwichElement.textContent = "-";
-      break;
+    switch (lvlSandwich) {
+      case 1:
+        costSandwich = 100000000;
+        costSandwichElement.textContent = costSandwich;
+        break;
+      case 2:
+        costSandwich = 1000000000;
+        costSandwichElement.textContent = costSandwich;
+        break;
+      case 3:
+        costSandwich = 10000000000;
+        costSandwichElement.textContent = costSandwich;
+        break;
+      case 4:
+        costSandwich = 100000000000;
+        costSandwichElement.textContent = costSandwich;
+        break;
+      case 5:
+        costSandwich = 1000000000000;
+        costSandwichElement.textContent = costSandwich;
+        break;
+      case 6:
+        lvlSandwichElement.textContent = "MAX";
+        costSandwichElement.textContent = "-";
+        codyImage.src = codyLvl11;
+        break;
+    }
   }
 };
