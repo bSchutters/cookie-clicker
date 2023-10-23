@@ -1,4 +1,8 @@
 import '../css/style.css';
+
+import codyLvl3 from "../assets/images/Cody3D/png/Sleep-Cody_3D.png";
+import codyLvl4 from "../assets/images/Cody3D/png/Devil-Cody_3D.png";
+
 // VAR GEN
 let scoreElement = document.getElementById("score");
 
@@ -107,6 +111,100 @@ cardBurgerElement.onclick = function () {
     }
 };
 
+/// LEVEL 3 - COFFEE
+
+let cardCoffeeElement = document.getElementById("card-coffee");
+let costCoffeeElement = document.getElementById("cost-coffee");
+let costCoffee = 500;
+let lvlCoffeeElement = document.getElementById("lvl-coffee");
+let lvlCoffee = 1;
+lvlCoffeeElement.textContent = lvlCoffee;
+costCoffeeElement.textContent = costCoffee;
+
+cardCoffeeElement.onclick = function () {
+    if (lvlCoffee <= 5 && score >= costCoffee) {
+        lvlCoffee += 1;
+        lvlCoffeeElement.textContent = lvlCoffee;
+        score = score - costCoffee;
+        scoreElement.textContent = score;
+        clicValue = clicValue + 5;
+    }
+
+    switch (lvlCoffee) {
+        case 1:
+            costCoffee = 100;
+            costCoffeeElement.textContent = costCoffee;
+            break;
+        case 2:
+            costCoffee = 250;
+            costCoffeeElement.textContent = costCoffee;
+            break;
+        case 3:
+            costCoffee = 500;
+            costCoffeeElement.textContent = costCoffee;
+            break;
+        case 4:
+            costCoffee = 1000;
+            costCoffeeElement.textContent = costCoffee;
+            break;
+        case 5:
+            costCoffee = 2500;
+            costCoffeeElement.textContent = costCoffee;
+            break;
+        case 6:
+            lvlCoffeeElement.textContent = "MAX";
+            costCoffeeElement.textContent = "-";
+            codyImage.src = codyLvl3
+            break;
+    }
+};
+/// LEVEL 4 - DORAYAKI
+
+let cardDorayakiElement = document.getElementById("card-dorayaki");
+let costDorayakiElement = document.getElementById("cost-dorayaki");
+let costDorayaki = 2000;
+let lvlDorayakiElement = document.getElementById("lvl-dorayaki");
+let lvlDorayaki = 1;
+lvlDorayakiElement.textContent = lvlDorayaki;
+costDorayakiElement.textContent = costDorayaki;
+
+cardDorayakiElement.onclick = function () {
+    if (lvlDorayaki <= 5 && score >= costDorayaki) {
+        lvlDorayaki += 1;
+        lvlDorayakiElement.textContent = lvlDorayaki;
+        score = score - costDorayaki;
+        scoreElement.textContent = score;
+        clicValue = clicValue + 10;
+    }
+
+    switch (lvlDorayaki) {
+        case 1:
+            costDorayaki = 2000;
+            costDorayakiElement.textContent = costDorayaki;
+            break;
+        case 2:
+            costDorayaki = 4000;
+            costDorayakiElement.textContent = costDorayaki;
+            break;
+        case 3:
+            costDorayaki = 8000;
+            costDorayakiElement.textContent = costDorayaki;
+            break;
+        case 4:
+            costDorayaki = 16000;
+            costDorayakiElement.textContent = costDorayaki;
+            break;
+        case 5:
+            costDorayaki = 32000;
+            costDorayakiElement.textContent = costDorayaki;
+            break;
+        case 6:
+            lvlDorayakiElement.textContent = "MAX";
+            costDorayakiElement.textContent = "-";
+            codyImage.src = codyLvl4;
+            break;
+    }
+};
 /// LEVEL 8 - KEBAB
 
 let cardKebabElement = document.getElementById("card-kebab");
