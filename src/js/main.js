@@ -158,7 +158,194 @@ cardCoffeeElement.onclick = function () {
             break;
     }
 };
+
 /// LEVEL 4 - DORAYAKI
+
+let cardDorayakiElement = document.getElementById("card-dorayaki");
+let costDorayakiElement = document.getElementById("cost-dorayaki");
+let costDorayaki = 1500;
+let lvlDorayakiElement = document.getElementById("lvl-dorayaki");
+let lvlDorayaki = 1;
+lvlDorayakiElement.textContent = lvlDorayaki;
+costDorayakiElement.textContent = costDorayaki;
+
+cardDorayakiElement.onclick = function () {
+  if (lvlDorayaki <= 5 && score >= costDorayaki) {
+    lvlDorayaki += 1;
+    lvlDorayakiElement.textContent = lvlDorayaki;
+    score = score - costDorayaki;
+    scoreElement.textContent = score;
+    clicValue = clicValue + 50;
+
+    switch (lvlDorayaki) {
+      case 1:
+        costDorayaki = 1000;
+        costDorayakiElement.textContent = costDorayaki;
+        break;
+      case 2:
+        costDorayaki = 2000;
+        costDorayakiElement.textContent = costDorayaki;
+        break;
+      case 3:
+        costDorayaki = 4000;
+        costDorayakiElement.textContent = costDorayaki;
+        break;
+      case 4:
+        costDorayaki = 8000;
+        costDorayakiElement.textContent = costDorayaki;
+        break;
+      case 5:
+        costDorayaki = 16000;
+        costDorayakiElement.textContent = costDorayaki;
+        break;
+      case 6:
+        lvlDorayakiElement.textContent = "MAX";
+        costDorayakiElement.textContent = "-";
+        break;
+    }
+  }
+};
+/// LEVEL 5 - FRIES
+
+let cardFriesElement = document.getElementById("card-fries");
+let costFriesElement = document.getElementById("cost-fries");
+let costFries = 5000;
+let lvlFriesElement = document.getElementById("lvl-fries");
+let lvlFries = 1;
+lvlFriesElement.textContent = lvlFries;
+costFriesElement.textContent = costFries;
+
+cardFriesElement.onclick = function () {
+  if (lvlFries <= 5 && score >= costFries) {
+    lvlFries += 1;
+    lvlFriesElement.textContent = lvlFries;
+    score = score - costFries;
+    scoreElement.textContent = score;
+    clicValue = clicValue + 150;
+
+    switch (lvlFries) {
+      case 1:
+        costFries = 5000;
+        costFriesElement.textContent = costFries;
+        break;
+      case 2:
+        costFries = 10000;
+        costFriesElement.textContent = costFries;
+        break;
+      case 3:
+        costFries = 20000;
+        costFriesElement.textContent = costFries;
+        break;
+      case 4:
+        costFries = 40000;
+        costFriesElement.textContent = costFries;
+        break;
+      case 5:
+        costFries = 80000;
+        costFriesElement.textContent = costFries;
+        break;
+      case 6:
+        lvlFriesElement.textContent = "MAX";
+        costFriesElement.textContent = "-";
+        break;
+    }
+  }
+};
+
+/// LEVEL 6 - HOT DOG
+
+let cardHotDogElement = document.getElementById("card-HotDog");
+let costHotDogElement = document.getElementById("cost-hotTog");
+let costHotDog = 10000;
+let lvlHotDogElement = document.getElementById("lvl-HotDog");
+let lvlHotDog = 1;
+lvlHotDogElement.textContent = lvlHotDog;
+costHotDogElement.textContent = costHotDog;
+
+cardHotDogElement.onclick = function () {
+  if (lvlHotDog <= 5 && score >= costHotDog) {
+    lvlHotDog += 1;
+    lvlHotDogElement.textContent = lvlHotDog;
+    score = score - costHotDog;
+    scoreElement.textContent = score;
+    clicValue = clicValue + 1000;
+
+    switch (lvlHotDog) {
+      case 1:
+        costHotDog = 10000;
+        costHotDogElement.textContent = costHotDog;
+        break;
+      case 2:
+        costHotDog = 30000;
+        costHotDogElement.textContent = costHotDog;
+        break;
+      case 3:
+        costHotDog = 60000;
+        costHotDogElement.textContent = costHotDog;
+        break;
+      case 4:
+        costHotDog = 120000;
+        costHotDogElement.textContent = costHotDog;
+        break;
+      case 5:
+        costHotDog = 240000;
+        costHotDogElement.textContent = costHotDog;
+        break;
+      case 6:
+        lvlHotDogElement.textContent = "MAX";
+        costHotDogElement.textContent = "-";
+        break;
+    }
+  }
+};
+
+/// LEVEL 7-ICE CREALM
+
+let cardIceCreamElement = document.getElementById("Card-ice");
+let costIceCreamElement = document.getElementById("cost-ice");
+let costIceCream = 20000;
+let lvlIceCreamElement = document.getElementById("lvl-ice");
+let lvlIceCream = 1;
+lvlIceCreamElement.textContent = lvlIceCream;
+costIceCreamElement.textContent = costIceCream;
+
+cardIceCreamElement.onclick = function () {
+  if (lvlIceCream <= 5 && score >= costIceCream) {
+    lvlIceCream += 1;
+    lvlIceCreamElement.textContent = lvlIceCream;
+    score = score - costIceCream;
+    scoreElement.textContent = score;
+    clicValue = clicValue + 1500;
+
+    switch (lvlIceCream) {
+      case 1:
+        costIceCream = 50000;
+        costIceCreamElement.textContent = costIceCream;
+        break;
+      case 2:
+        costIceCream = 100000;
+        costIceCreamElement.textContent = costIceCream;
+        break;
+      case 3:
+        costIceCream = 200000;
+        costIceCreamElement.textContent = costIceCream;
+        break;
+      case 4:
+        costIceCream = 400000;
+        costIceCreamElement.textContent = costIceCream;
+        break;
+      case 5:
+        costIceCream = 800000;
+        costIceCreamElement.textContent = costIceCream;
+        break;
+      case 6:
+        lvlIceCreamElement.textContent = "MAX";
+        costIceCreamElement.textContent = "-";
+        break;
+    }
+  }
+};
+
 
 let cardDorayakiElement = document.getElementById("card-dorayaki");
 let costDorayakiElement = document.getElementById("cost-dorayaki");
