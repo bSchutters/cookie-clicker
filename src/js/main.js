@@ -8,3 +8,5 @@ codyImage.addEventListener("click", () => {
   score += 1;
   scoreElement.textContent = score;
 });
+
+// Coddy count//
