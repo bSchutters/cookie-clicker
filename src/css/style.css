@@ -99,3 +99,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #095568;
 }
+
+.cards:hover {
+  outline: solid 2px #095568;
+}

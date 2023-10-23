@@ -11,11 +11,11 @@
       <section id="left-main" class="w-fit flex flex-col gap-5 p-8">
         <div
           id="level-overflow"
-          class="flex flex-col gap-5 overflow-y-scroll overflow-x-hidden pr-6"
+          class="flex flex-col gap-5 overflow-y-scroll overflow-x-hidden pr-6 pl-[2px] pt-[2px]"
         >
           <!-- LEVEL 1 -->
           <div
-            class="bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
             id="card-pizza"
           >
             <div class="flex items-center gap-5">
@@ -28,18 +28,20 @@
                 <h2 class="font-Zcool text-4xl">Pizza</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-pizza">20</span>
+
+                  <span class="text-color-accent" id="cost-pizza">0</span>
                 </p>
               </div>
             </div>
             <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-pizza">MAX</h2>
+              <h2 class="font-Zcool text-6xl" id="lvl-pizza">1</h2>
             </div>
           </div>
 
           <!-- LEVEL 2 -->
           <div
-            class="bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            id="card-burger"
           >
             <div class="flex items-center gap-5">
               <img
@@ -49,17 +51,21 @@
               />
               <div>
                 <h2 class="font-Zcool text-4xl">Burger</h2>
-                <p>Cost: <span class="text-color-accent">200</span></p>
+                <p>
+                  Cost:
+                  <span class="text-color-accent" id="cost-burger">200</span>
+                </p>
               </div>
             </div>
             <div>
-              <h2 class="font-Zcool text-6xl">8</h2>
+              <h2 class="font-Zcool text-6xl" id="lvl-burger">8</h2>
             </div>
           </div>
 
           <!-- LEVEL 3 -->
           <div
-            class="bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            id="card-coffee"
           >
             <div class="flex items-center gap-5">
               <img
@@ -69,11 +75,14 @@
               />
               <div>
                 <h2 class="font-Zcool text-4xl">Coffee</h2>
-                <p>Cost: <span class="text-color-accent">200</span></p>
+                <p>
+                  Cost:
+                  <span class="text-color-accent" id="cost-coffee">200</span>
+                </p>
               </div>
             </div>
             <div>
-              <h2 class="font-Zcool text-6xl">8</h2>
+              <h2 class="font-Zcool text-6xl" id="lvl-coffee">8</h2>
             </div>
           </div>
 
@@ -159,7 +168,8 @@
 
           <!-- LEVEL 8 -->
           <div
-            class="bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            id="card-kebab"
           >
             <div class="flex items-center gap-5">
               <img
@@ -169,17 +179,21 @@
               />
               <div>
                 <h2 class="font-Zcool text-4xl">Kebab</h2>
-                <p>Cost: <span class="text-color-accent">200</span></p>
+                <p>
+                  Cost:
+                  <span class="text-color-accent" id="cost-kebab">200</span>
+                </p>
               </div>
             </div>
             <div>
-              <h2 class="font-Zcool text-6xl">8</h2>
+              <h2 class="font-Zcool text-6xl" id="lvl-kebab">8</h2>
             </div>
           </div>
 
           <!-- LEVEL 9 -->
           <div
-            class="bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            id="card-milk"
           >
             <div id="left-card-9" class="flex items-center gap-5">
               <img
@@ -189,17 +203,21 @@
               />
               <div>
                 <h2 class="font-Zcool text-4xl">Milk</h2>
-                <p>Cost: <span class="text-color-accent">200</span></p>
+                <p>
+                  Cost:
+                  <span class="text-color-accent" id="cost-milk">200</span>
+                </p>
               </div>
             </div>
             <div>
-              <h2 class="font-Zcool text-6xl">8</h2>
+              <h2 class="font-Zcool text-6xl" id="lvl-milk">8</h2>
             </div>
           </div>
 
           <!-- LEVEL 10 -->
           <div
-            class="bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            id="card-muffin"
           >
             <div class="flex items-center gap-5">
               <img
@@ -209,17 +227,21 @@
               />
               <div>
                 <h2 class="font-Zcool text-4xl">Muffin</h2>
-                <p>Cost: <span class="text-color-accent">200</span></p>
+                <p>
+                  Cost:
+                  <span class="text-color-accent" id="cost-muffin">200</span>
+                </p>
               </div>
             </div>
             <div>
-              <h2 class="font-Zcool text-6xl">8</h2>
+              <h2 class="font-Zcool text-6xl" id="lvl-muffin">8</h2>
             </div>
           </div>
 
           <!-- LEVEL 11 -->
           <div
-            class="bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            id="card-sandwich"
           >
             <div class="flex items-center gap-5">
               <img
@@ -229,11 +251,14 @@
               />
               <div>
                 <h2 class="font-Zcool text-4xl">Sandwich</h2>
-                <p>Cost: <span class="text-color-accent">200</span></p>
+                <p>
+                  Cost:
+                  <span class="text-color-accent" id="cost-sandwich">200</span>
+                </p>
               </div>
             </div>
             <div>
-              <h2 class="font-Zcool text-6xl">8</h2>
+              <h2 class="font-Zcool text-6xl" id="lvl-sandwich">8</h2>
             </div>
           </div>
 
@@ -264,9 +289,9 @@
             id="card-stats"
             class="bg-dark-sec rounded-2xl flex flex-col text-light-prim w-[370px] min-h-[120px] px-5 justify-center gap-2 font-Montserrat-Regular"
           >
-            <h3>Multiplier: <span id="multiplier">0.5x</span></h3>
+            <h3>Clic: <span id="clic">0</span></h3>
+            <h3>Multiplier: <span id="Multiplier">0x</span></h3>
             <h3>Auto Clic: <span id="auto-clic">False</span></h3>
-            <h3>Bonus: <span id="bonus">True</span></h3>
           </div>
         </div>
       </section>
@@ -275,7 +300,7 @@
         id="right-main"
         class="w-full h-screen flex flex-col items-center justify-between pt-8"
       >
-        <h1 id="score" class="font-Zcool text-light-prim text-8xl h-1/6">0</h1>
+        <h1 id="score" class="font-Zcool text-light-prim text-8xl h-1/6">10</h1>
         <div id="img-cody" class="h-5/6">
           <img
             class="h-full w-auto"
