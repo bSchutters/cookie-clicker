@@ -295,4 +295,3 @@ cardSandwichElement.onclick = function () {
       break;
   }
 };
-
