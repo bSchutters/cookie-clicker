@@ -132,23 +132,23 @@ cardCoffeeElement.onclick = function () {
 
     switch (lvlCoffee) {
         case 1:
-            costCoffee = 100;
-            costCoffeeElement.textContent = costCoffee;
-            break;
-        case 2:
-            costCoffee = 250;
-            costCoffeeElement.textContent = costCoffee;
-            break;
-        case 3:
             costCoffee = 500;
             costCoffeeElement.textContent = costCoffee;
             break;
-        case 4:
+        case 2:
             costCoffee = 1000;
             costCoffeeElement.textContent = costCoffee;
             break;
-        case 5:
+        case 3:
             costCoffee = 2500;
+            costCoffeeElement.textContent = costCoffee;
+            break;
+        case 4:
+            costCoffee = 5000;
+            costCoffeeElement.textContent = costCoffee;
+            break;
+        case 5:
+            costCoffee = 10000;
             costCoffeeElement.textContent = costCoffee;
             break;
         case 6:
