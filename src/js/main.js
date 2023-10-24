@@ -1,19 +1,25 @@
 import "../css/style.css";
 import "./store.js"; // Importez le store
-import {scoreElement} from "./store.js";
+import { scoreElement } from "./store.js";
 
-"./store.js"; // Importez le store
+("./store.js"); // Importez le store
 import "./images.js"; // Importez les images
 import "./lvl1.js"; // Importez le niveau 1
 // ... Importez d'autres niveaux si nécessaire ...
 
 // app.js
 
-import { getScore, getClicValue, setClicValue, subscribe, updateState } from "./store.js";
+import {
+  getScore,
+  getClicValue,
+  setClicValue,
+  subscribe,
+  updateState,
+} from "./store.js";
 
 // Composant qui affiche le score
 function scoreComponent(state) {
-    scoreElement.textContent = state.score;
+  scoreElement.textContent = state.score;
 }
 
 // Abonnez le composant à l'état
@@ -25,7 +31,6 @@ updateState({ score: 10 });
 // Modifiez la valeur de clic
 setClicValue(2);
 
-
 /*
 // BUTTON CODY
 let codyImage = document.getElementById("cody-lvl-1");
@@ -33,6 +38,17 @@ codyImage.addEventListener("click", () => {
   score += clicValue;
   scoreElement.textContent = score;
 });
+
+
+function autoClicker() {
+  if (autoClicBoolean === true) {
+    function autoClickerIncr() {
+      score = score + autoClicValue;
+      scoreElement.textContent = score;
+    }
+    setInterval(autoClickerIncr, 1000);
+  }
+}
 
 
 /// LEVEL 1 - PIZZA
@@ -155,6 +171,8 @@ cardCoffeeElement.onclick = function () {
         costCoffeeElement.textContent = costCoffee;
         break;
       case 2:
+        autoClicBoolean = true;
+        autoClicker();
         costCoffee = 1000;
         costCoffeeElement.textContent = costCoffee;
         break;
@@ -203,6 +221,7 @@ cardDorayakiElement.onclick = function () {
         costDorayakiElement.textContent = costDorayaki;
         break;
       case 2:
+        autoClicValue = autoClicValue + 2;
         costDorayaki = 2000;
         costDorayakiElement.textContent = costDorayaki;
         break;
@@ -250,6 +269,7 @@ cardFriesElement.onclick = function () {
         costFriesElement.textContent = costFries;
         break;
       case 2:
+        autoClicValue = autoClicValue + 10;
         costFries = 10000;
         costFriesElement.textContent = costFries;
         break;
@@ -298,6 +318,7 @@ cardHotDogElement.onclick = function () {
         costHotDogElement.textContent = costHotDog;
         break;
       case 2:
+        autoClicValue = autoClicValue + 100;
         costHotDog = 30000;
         costHotDogElement.textContent = costHotDog;
         break;
@@ -346,6 +367,7 @@ cardIceCreamElement.onclick = function () {
         costIceCreamElement.textContent = costIceCream;
         break;
       case 2:
+        autoClicValue = autoClicValue + 1000;
         costIceCream = 100000;
         costIceCreamElement.textContent = costIceCream;
         break;
@@ -394,6 +416,7 @@ cardKebabElement.onclick = function () {
         costKebabElement.textContent = costKebab;
         break;
       case 2:
+        autoClicValue = autoClicValue + 2500;
         costKebab = 400000;
         costKebabElement.textContent = costKebab;
         break;
@@ -442,6 +465,7 @@ cardMilkElement.onclick = function () {
         costMilkElement.textContent = costMilk;
         break;
       case 2:
+        autoClicValue = autoClicValue + 10000;
         costMilk = 2000000;
         costKMilk;
         break;
@@ -490,6 +514,7 @@ cardMuffinElement.onclick = function () {
         costMuffinElement.textContent = costMuffin;
         break;
       case 2:
+        autoClicValue = autoClicValue + 100000;
         costMuffin = 10000000;
         costMuffinElement.textContent = costMuffin;
         break;
@@ -538,6 +563,7 @@ cardSandwichElement.onclick = function () {
         costSandwichElement.textContent = costSandwich;
         break;
       case 2:
+        autoClicValue = autoClicValue + 250000;
         costSandwich = 1000000000;
         costSandwichElement.textContent = costSandwich;
         break;
