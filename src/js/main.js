@@ -15,8 +15,10 @@ import codyLvl11 from "../assets/images/Cody3D/png/Heart-Cody_3D.png";
 // VAR GEN
 let scoreElement = document.getElementById("score");
 
-let score = 1000000000000000;
+let score = 500;
 let clicValue = 0;
+let autoClicBoolean = false;
+let autoClicValue = 1;
 
 // BUTTON CODY
 let codyImage = document.getElementById("cody-lvl-1");
@@ -24,6 +26,16 @@ codyImage.addEventListener("click", () => {
   score += clicValue;
   scoreElement.textContent = score;
 });
+
+function autoClicker() {
+  if (autoClicBoolean === true) {
+    function autoClickerIncr() {
+      score = score + autoClicValue;
+      scoreElement.textContent = score;
+    }
+    setInterval(autoClickerIncr, 1000);
+  }
+}
 
 /// LEVEL 1 - PIZZA
 
@@ -145,6 +157,8 @@ cardCoffeeElement.onclick = function () {
         costCoffeeElement.textContent = costCoffee;
         break;
       case 2:
+        autoClicBoolean = true;
+        autoClicker();
         costCoffee = 1000;
         costCoffeeElement.textContent = costCoffee;
         break;
@@ -193,6 +207,7 @@ cardDorayakiElement.onclick = function () {
         costDorayakiElement.textContent = costDorayaki;
         break;
       case 2:
+        autoClicValue = autoClicValue + 2;
         costDorayaki = 2000;
         costDorayakiElement.textContent = costDorayaki;
         break;
@@ -240,6 +255,7 @@ cardFriesElement.onclick = function () {
         costFriesElement.textContent = costFries;
         break;
       case 2:
+        autoClicValue = autoClicValue + 10;
         costFries = 10000;
         costFriesElement.textContent = costFries;
         break;
@@ -288,6 +304,7 @@ cardHotDogElement.onclick = function () {
         costHotDogElement.textContent = costHotDog;
         break;
       case 2:
+        autoClicValue = autoClicValue + 100;
         costHotDog = 30000;
         costHotDogElement.textContent = costHotDog;
         break;
@@ -336,6 +353,7 @@ cardIceCreamElement.onclick = function () {
         costIceCreamElement.textContent = costIceCream;
         break;
       case 2:
+        autoClicValue = autoClicValue + 1000;
         costIceCream = 100000;
         costIceCreamElement.textContent = costIceCream;
         break;
@@ -384,6 +402,7 @@ cardKebabElement.onclick = function () {
         costKebabElement.textContent = costKebab;
         break;
       case 2:
+        autoClicValue = autoClicValue + 2500;
         costKebab = 400000;
         costKebabElement.textContent = costKebab;
         break;
@@ -432,6 +451,7 @@ cardMilkElement.onclick = function () {
         costMilkElement.textContent = costMilk;
         break;
       case 2:
+        autoClicValue = autoClicValue + 10000;
         costMilk = 2000000;
         costKMilk;
         break;
@@ -480,6 +500,7 @@ cardMuffinElement.onclick = function () {
         costMuffinElement.textContent = costMuffin;
         break;
       case 2:
+        autoClicValue = autoClicValue + 100000;
         costMuffin = 10000000;
         costMuffinElement.textContent = costMuffin;
         break;
@@ -528,6 +549,7 @@ cardSandwichElement.onclick = function () {
         costSandwichElement.textContent = costSandwich;
         break;
       case 2:
+        autoClicValue = autoClicValue + 250000;
         costSandwich = 1000000000;
         costSandwichElement.textContent = costSandwich;
         break;
