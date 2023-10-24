@@ -16,7 +16,6 @@ import codyLvl11 from "../assets/images/Cody3D/png/Heart-Cody_3D.png";
 let scoreElement = document.getElementById("score");
 
 let score = 1000000000000000;
-let multiplier = 0;
 let clicValue = 0;
 
 // BUTTON CODY
