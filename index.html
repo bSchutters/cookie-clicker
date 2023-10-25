@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Cookie Clicker</title>
-    <script type="module" crossorigin src="/cookie-clicker/assets/main-12b7f6df.js"></script>
-    <link rel="stylesheet" href="/cookie-clicker/assets/index-f386b7d8.css">
+    <script type="module" crossorigin src="/cookie-clicker/assets/main-ea8d5a78.js"></script>
+    <link rel="stylesheet" href="/cookie-clicker/assets/index-49db8db6.css">
   </head>
   <body class="bg-dark-prim font-Montserrat-Medium overflow-hidden">
     <main class="flex h-screen">
@@ -151,7 +152,7 @@
                 <h2 class="font-Zcool text-4xl">Hot Dog</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-hotTog">200</span>
+                  <span class="text-color-accent" id="cost-HotDog">200</span>
                 </p>
               </div>
             </div>
@@ -300,15 +301,20 @@
           </div>
         </div>
 
-        <div id="stats-notifs">
+        <div id="stats-notifs" class="flex items-center">
           <!-- STATS -->
           <div
             id="card-stats"
-            class="bg-dark-sec rounded-2xl flex flex-col text-light-prim w-[370px] min-h-[120px] px-5 justify-center gap-2 font-Montserrat-Regular"
+            class="bg-dark-sec rounded-2xl flex text-light-prim w-[370px] min-h-[120px] px-5 justify-between items-center gap-2 font-Montserrat-Regular"
           >
-            <h3>Clic: <span id="clic">0</span></h3>
-            <h3>Multiplier: <span id="Multiplier">0x</span></h3>
-            <h3>Auto Clic: <span id="auto-clic">False</span></h3>
+            <div class="flex flex-col">
+              <h3>Clic: <span id="clic">0</span></h3>
+              <h3>Auto Clic: <span id="auto-clic">False</span></h3>
+              <h3>Bonus: <span id="bonus">?</span></h3>
+            </div>
+            <div id="easter-egg">
+              <div id="clic-easteregg" class="bg-[#033f4b] w-10 h-10"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -321,7 +327,7 @@
         <div id="img-cody" class="h-5/6">
           <img
             class="h-full w-auto"
-            id="cody-lvl-1"
+            id="cody"
             src="/cookie-clicker/assets/Sleep-Cody_3D-2aace5b0.png"
             alt=""
           />
@@ -334,6 +340,5 @@
         <button id="counter" type="button"></button>
       </div>
     </div>
-    
   </body>
 </html>
