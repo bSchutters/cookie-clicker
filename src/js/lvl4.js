@@ -1,0 +1,63 @@
+// lvl4.js
+import {
+  getScore,
+  getClicValue,
+  setClicValue,
+  updateState,
+  codyImage,
+} from "./store.js";
+import codyLvl4 from "../assets/images/Cody3D/png/Devil-Cody_3D.png";
+
+const cardDorayakiElement = document.getElementById("card-dorayaki");
+const costDorayakiElement = document.getElementById("cost-dorayaki");
+const lvlDorayakiElement = document.getElementById("lvl-dorayaki");
+
+let lvlDorayaki = 1;
+let costDorayaki = 1500;
+
+lvlDorayakiElement.textContent = lvlDorayaki;
+costDorayakiElement.textContent = costDorayaki;
+
+cardDorayakiElement.onclick = function () {
+  if (lvlDorayaki <= 5 && getScore() >= costDorayaki) {
+    lvlDorayaki += 1;
+    lvlDorayakiElement.textContent = lvlDorayaki;
+    const currentScore = getScore();
+    const newScore = currentScore - costDorayaki;
+    updateState({ score: newScore });
+
+    const currentClicValue = getClicValue();
+    const newClicValue = currentClicValue + 50;
+    setClicValue(newClicValue);
+
+    switch (lvlDorayaki) {
+      case 1:
+        costDorayaki = 1000;
+        costDorayakiElement.textContent = costDorayaki;
+        break;
+      case 2:
+        autoClicValue = autoClicValue + 2;
+        costDorayaki = 2000;
+        costDorayakiElement.textContent = costDorayaki;
+        ATRate.innerText = "True - 3 CPS";
+        break;
+      case 3:
+        costDorayaki = 4000;
+        costDorayakiElement.textContent = costDorayaki;
+        break;
+      case 4:
+        costDorayaki = 8000;
+        costDorayakiElement.textContent = costDorayaki;
+        break;
+      case 5:
+        costDorayaki = 16000;
+        costDorayakiElement.textContent = costDorayaki;
+        break;
+      case 6:
+        lvlDorayakiElement.textContent = "MAX";
+        costDorayakiElement.textContent = "-";
+        codyImage.src = codyLvl4;
+        break;
+    }
+  }
+};
