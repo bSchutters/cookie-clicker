@@ -48,3 +48,4 @@ codyImage.addEventListener("click", () => {
   const currentClicValue = getClicValue();
   updateState({ score: currentScore + currentClicValue });
 });
+
