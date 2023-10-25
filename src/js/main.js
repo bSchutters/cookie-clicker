@@ -1,8 +1,29 @@
 import "../css/style.css";
-import "./globalVariables.js"; // Importez les variables globales
+import "./store.js"; // Importez le store
+import {scoreElement} from "./store.js";
+
+"./store.js"; // Importez le store
 import "./images.js"; // Importez les images
 import "./lvl1.js"; // Importez le niveau 1
 // ... Importez d'autres niveaux si nécessaire ...
+
+// app.js
+
+import { getScore, getClicValue, setClicValue, subscribe, updateState } from "./store.js";
+
+// Composant qui affiche le score
+function scoreComponent(state) {
+    scoreElement.textContent = state.score;
+}
+
+// Abonnez le composant à l'état
+subscribe(scoreComponent);
+
+// Modifiez l'état
+updateState({ score: 10 });
+
+// Modifiez la valeur de clic
+setClicValue(2);
 
 
 /*

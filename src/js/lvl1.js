@@ -1,66 +1,69 @@
 // lvl1.js
-import {score, scoreElement, clicValue,getClicValue, setClicValue} from "./globalVariables.js";
-import {codyImages} from "./images.js";
+import {
+    getScore,
+    getClicValue,
+    setClicValue,
+    updateState
+} from "./store.js";
+import { codyImages } from "./images.js";
 
-let codyImage = document.getElementById("cody-lvl-1");
+const codyImage = document.getElementById("cody-lvl-1");
+
 codyImage.addEventListener("click", () => {
-    score += clicValue;
-    scoreElement.textContent = score.toString();
+    const currentScore = getScore();
+    const currentClicValue = getClicValue();
+    updateState({ score: currentScore + currentClicValue });
 });
 
-let cardPizzaElement = document.getElementById("card-pizza");
-let costPizzaElement = document.getElementById("cost-pizza");
-let costPizza = 10;
-let lvlPizzaElement = document.getElementById("lvl-pizza");
+const cardPizzaElement = document.getElementById("card-pizza");
+const costPizzaElement = document.getElementById("cost-pizza");
+const lvlPizzaElement = document.getElementById("lvl-pizza");
+
 let lvlPizza = 1;
+let costPizza = 10;
+
 lvlPizzaElement.textContent = lvlPizza;
 costPizzaElement.textContent = costPizza;
 
 cardPizzaElement.onclick = function () {
-    if (lvlPizza <= 5 && score >= costPizza) {
+    if (lvlPizza <= 5 && getScore() >= costPizza) {
         lvlPizza += 1;
         lvlPizzaElement.textContent = lvlPizza;
-        score = score - costPizza;
-        scoreElement.textContent = score.toString();
-        let newClicValue = getClicValue() + 1;
-        setClicValue(newClicValue); // Utilisez la fonction pour mettre à jour clicValue
+        const currentScore = getScore();
+        const newScore = currentScore - costPizza;
+        updateState({ score: newScore });
 
-        cardPizzaElement.onclick = function () {
-            if (lvlPizza <= 5 && score >= costPizza) {
-                lvlPizza += 1;
-                lvlPizzaElement.textContent = lvlPizza.toString(); // Convertissez lvlPizza en chaîne.
-                score = score - costPizza;
-                scoreElement.textContent = score.toString(); // Convertissez score en chaîne.
-                clicValue = clicValue + 1;
+        const currentClicValue = getClicValue();
+        const newClicValue = currentClicValue + 1;
+        setClicValue(newClicValue);
 
-                switch (lvlPizza) {
-                    case 1:
-                        costPizza = 10;
-                        costPizzaElement.textContent = costPizza.toString(); // Convertissez costPizza en chaîne.
-                        break;
-                    case 2:
-                        costPizza = 50;
-                        costPizzaElement.textContent = costPizza.toString();
-                        break;
-                    case 3:
-                        costPizza = 100;
-                        costPizzaElement.textContent = costPizza.toString();
-                        break;
-                    case 4:
-                        costPizza = 200;
-                        costPizzaElement.textContent = costPizza.toString();
-                        break;
-                    case 5:
-                        costPizza = 500;
-                        costPizzaElement.textContent = costPizza.toString();
-                        break;
-                    case 6:
-                        lvlPizzaElement.textContent = "MAX";
-                        costPizzaElement.textContent = "-";
-                        codyImage.src = codyImages[0];
-                        break;
-                }
-            }
+        switch (lvlPizza) {
+            case 1:
+                costPizza = 10;
+                costPizzaElement.textContent = costPizza;
+                break;
+            case 2:
+                costPizza = 50;
+                costPizzaElement.textContent = costPizza;
+                break;
+            case 3:
+                costPizza = 100;
+                costPizzaElement.textContent = costPizza;
+                break;
+            case 4:
+                costPizza = 200;
+                costPizzaElement.textContent = costPizza;
+                break;
+            case 5:
+                costPizza = 500;
+                costPizzaElement.textContent = costPizza;
+                break;
+            case 6:
+                lvlPizzaElement.textContent = "MAX";
+                costPizzaElement.textContent = "-";
+                codyImage.src = codyImages[0];
+                break;
         }
     }
-}
+};
+
