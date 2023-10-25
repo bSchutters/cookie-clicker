@@ -12,6 +12,7 @@ export default {
       "innactif-bg": "#1D1D1D",
       "innactif-txt": "#383838",
       black: "#000000",
+      transparent: "transparent",
     },
     extend: {
       fontFamily: {

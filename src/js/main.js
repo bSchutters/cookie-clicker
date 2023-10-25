@@ -57,3 +57,9 @@ btnStartModal.onclick = function () {
   overlayStartModal.classList.add("hidden");
   startModal.classList.add("hidden");
 };
+
+const notif = document.getElementById("notif");
+
+notif.onclick = function () {
+  notif.classList.add("hidden");
+};
