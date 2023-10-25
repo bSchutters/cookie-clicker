@@ -11,6 +11,7 @@ export default {
       "red-notif": "#4B0319",
       "innactif-bg": "#1D1D1D",
       "innactif-txt": "#383838",
+      black: "#000000",
     },
     extend: {
       fontFamily: {
