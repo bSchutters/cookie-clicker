@@ -49,3 +49,11 @@ codyImage.addEventListener("click", () => {
   updateState({ score: currentScore + currentClicValue });
 });
 
+const startModal = document.getElementById("start-modal");
+const btnStartModal = document.getElementById("btn-start-modal");
+const overlayStartModal = document.getElementById("overlay");
+
+btnStartModal.onclick = function () {
+  overlayStartModal.classList.add("hidden");
+  startModal.classList.add("hidden");
+};
