@@ -16,10 +16,12 @@ import codyLvl11 from "../assets/images/Cody3D/png/Heart-Cody_3D.png";
 let scoreElement = document.getElementById("score");
 let easterEgg = document.getElementById("clic-easteregg");
 
-let score = 500;
+let score = 50000000;
 let clicValue = 0;
 let autoClicBoolean = false;
 let autoClicValue = 1;
+let clicRate = document.getElementById("clic");
+let ATRate = document.getElementById("auto-clic");
 
 // BUTTON CODY
 let codyImage = document.getElementById("cody-lvl-1");
@@ -55,11 +57,13 @@ cardPizzaElement.onclick = function () {
     score = score - costPizza;
     scoreElement.textContent = score;
     clicValue = clicValue + 1;
+    clicRate.innerText = clicValue;
 
     switch (lvlPizza) {
       case 1:
         costPizza = 10;
         costPizzaElement.textContent = costPizza;
+
         break;
       case 2:
         costPizza = 50;
@@ -103,6 +107,7 @@ cardBurgerElement.onclick = function () {
     score = score - costBurger;
     scoreElement.textContent = score;
     clicValue = clicValue + 2;
+    clicRate.innerText = clicValue;
 
     switch (lvlBurger) {
       case 1:
@@ -142,7 +147,6 @@ let costCoffee = 500;
 let lvlCoffeeElement = document.getElementById("lvl-coffee");
 let lvlCoffee = 1;
 lvlCoffeeElement.textContent = lvlCoffee;
-costCoffeeElement.textContent = costCoffee;
 
 cardCoffeeElement.onclick = function () {
   if (lvlCoffee <= 5 && score >= costCoffee) {
@@ -151,6 +155,7 @@ cardCoffeeElement.onclick = function () {
     score = score - costCoffee;
     scoreElement.textContent = score;
     clicValue = clicValue + 5;
+    clicRate.innerText = clicValue;
 
     switch (lvlCoffee) {
       case 1:
@@ -162,6 +167,8 @@ cardCoffeeElement.onclick = function () {
         autoClicker();
         costCoffee = 1000;
         costCoffeeElement.textContent = costCoffee;
+        ATRate.innerText = "True - 1 CPS";
+
         break;
       case 3:
         costCoffee = 2500;
@@ -201,6 +208,7 @@ cardDorayakiElement.onclick = function () {
     score = score - costDorayaki;
     scoreElement.textContent = score;
     clicValue = clicValue + 50;
+    clicRate.innerText = clicValue;
 
     switch (lvlDorayaki) {
       case 1:
@@ -211,6 +219,7 @@ cardDorayakiElement.onclick = function () {
         autoClicValue = autoClicValue + 2;
         costDorayaki = 2000;
         costDorayakiElement.textContent = costDorayaki;
+        ATRate.innerText = "True - 3 CPS";
         break;
       case 3:
         costDorayaki = 4000;
@@ -249,6 +258,7 @@ cardFriesElement.onclick = function () {
     score = score - costFries;
     scoreElement.textContent = score;
     clicValue = clicValue + 150;
+    clicRate.innerText = clicValue;
 
     switch (lvlFries) {
       case 1:
@@ -259,6 +269,7 @@ cardFriesElement.onclick = function () {
         autoClicValue = autoClicValue + 10;
         costFries = 10000;
         costFriesElement.textContent = costFries;
+        ATRate.innerText = "True - 13 CPS";
         break;
       case 3:
         costFries = 20000;
@@ -298,6 +309,7 @@ cardHotDogElement.onclick = function () {
     score = score - costHotDog;
     scoreElement.textContent = score;
     clicValue = clicValue + 1000;
+    clicRate.innerText = clicValue;
 
     switch (lvlHotDog) {
       case 1:
@@ -308,6 +320,7 @@ cardHotDogElement.onclick = function () {
         autoClicValue = autoClicValue + 100;
         costHotDog = 30000;
         costHotDogElement.textContent = costHotDog;
+        ATRate.innerText = "True - 113 CPS";
         break;
       case 3:
         costHotDog = 60000;
@@ -347,6 +360,7 @@ cardIceCreamElement.onclick = function () {
     score = score - costIceCream;
     scoreElement.textContent = score;
     clicValue = clicValue + 1500;
+    clicRate.innerText = clicValue;
 
     switch (lvlIceCream) {
       case 1:
@@ -357,6 +371,7 @@ cardIceCreamElement.onclick = function () {
         autoClicValue = autoClicValue + 1000;
         costIceCream = 100000;
         costIceCreamElement.textContent = costIceCream;
+        ATRate.innerText = "True - 1113 CPS";
         break;
       case 3:
         costIceCream = 200000;
@@ -396,6 +411,7 @@ cardKebabElement.onclick = function () {
     score = score - costKebab;
     scoreElement.textContent = score;
     clicValue = clicValue + 1000;
+    clicRate.innerText = clicValue;
 
     switch (lvlKebab) {
       case 1:
@@ -406,6 +422,7 @@ cardKebabElement.onclick = function () {
         autoClicValue = autoClicValue + 2500;
         costKebab = 400000;
         costKebabElement.textContent = costKebab;
+        ATRate.innerText = "True - 3613 CPS";
         break;
       case 3:
         costKebab = 800000;
@@ -445,6 +462,7 @@ cardMilkElement.onclick = function () {
     score = score - costMilk;
     scoreElement.textContent = score;
     clicValue = clicValue + 2000;
+    clicRate.innerText = clicValue;
 
     switch (lvlMilk) {
       case 1:
@@ -454,7 +472,8 @@ cardMilkElement.onclick = function () {
       case 2:
         autoClicValue = autoClicValue + 10000;
         costMilk = 2000000;
-        costKMilk;
+        costMilkElement.textContent = costKMilk;
+        ATRate.innerText = "True - 13613 CPS";
         break;
       case 3:
         costMilk = 4000000;
@@ -494,6 +513,7 @@ cardMuffinElement.onclick = function () {
     score = score - costMuffin;
     scoreElement.textContent = score;
     clicValue = clicValue + 5000;
+    clicRate.innerText = clicValue;
 
     switch (lvlMuffin) {
       case 1:
@@ -504,6 +524,7 @@ cardMuffinElement.onclick = function () {
         autoClicValue = autoClicValue + 100000;
         costMuffin = 10000000;
         costMuffinElement.textContent = costMuffin;
+        ATRate.innerText = "True - 113613 CPS";
         break;
       case 3:
         costMuffin = 20000000;
@@ -543,6 +564,7 @@ cardSandwichElement.onclick = function () {
     score = score - costSandwich;
     scoreElement.textContent = score;
     clicValue = clicValue + 50000;
+    clicRate.innerText = clicValue;
 
     switch (lvlSandwich) {
       case 1:
@@ -553,6 +575,7 @@ cardSandwichElement.onclick = function () {
         autoClicValue = autoClicValue + 250000;
         costSandwich = 1000000000;
         costSandwichElement.textContent = costSandwich;
+        ATRate.innerText = "True - 363613 CPS";
         break;
       case 3:
         costSandwich = 10000000000;
