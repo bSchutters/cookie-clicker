@@ -2,9 +2,11 @@ import "../css/style.css";
 import "./store.js"; // Importez le store
 import { scoreElement } from "./store.js";
 
-("./store.js"); // Importez le store
+import("./store.js"); // Importez le store
 import "./images.js"; // Importez les images
 import "./lvl1.js"; // Importez le niveau 1
+import "./lvl2.js"; // Importez le niveau 1
+import "./lvl3.js"; // Importez le niveau 1
 // ... Importez d'autres niveaux si nécessaire ...
 
 // app.js
@@ -29,10 +31,18 @@ function scoreComponent(state) {
 subscribe(scoreComponent);
 
 // Modifiez l'état
-updateState({ score: 10 });
+updateState({ score: 1000000000000 });
 
 // Modifiez la valeur de clic
-setClicValue(2);
+setClicValue(0);
+
+const codyImage = document.getElementById("cody-lvl-1");
+
+codyImage.addEventListener("click", () => {
+  const currentScore = getScore();
+  const currentClicValue = getClicValue();
+  updateState({ score: currentScore + currentClicValue });
+});
 
 /*
 // BUTTON CODY
@@ -43,15 +53,6 @@ codyImage.addEventListener("click", () => {
 });
 
 
-function autoClicker() {
-  if (autoClicBoolean === true) {
-    function autoClickerIncr() {
-      score = score + autoClicValue;
-      scoreElement.textContent = score;
-    }
-    setInterval(autoClickerIncr, 1000);
-  }
-}
 
 
 /// LEVEL 1 - PIZZA
