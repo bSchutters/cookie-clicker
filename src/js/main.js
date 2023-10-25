@@ -14,7 +14,6 @@ import codyLvl11 from "../assets/images/Cody3D/png/Heart-Cody_3D.png";
 
 // VAR GEN
 let scoreElement = document.getElementById("score");
-
 let score = 50000000;
 let clicValue = 0;
 let autoClicBoolean = false;
@@ -146,6 +145,7 @@ let costCoffee = 500;
 let lvlCoffeeElement = document.getElementById("lvl-coffee");
 let lvlCoffee = 1;
 lvlCoffeeElement.textContent = lvlCoffee;
+costCoffeeElement.textContent = costCoffee;
 
 cardCoffeeElement.onclick = function () {
   if (lvlCoffee <= 5 && score >= costCoffee) {
