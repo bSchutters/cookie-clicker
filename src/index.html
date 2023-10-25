@@ -12,11 +12,11 @@
       <!-- START MODAL -->
       <div
         id="overlay"
-        class="bg-black absolute w-full h-full top-0 left-0 opacity-70"
+        class="hidden bg-black absolute w-full h-full top-0 left-0 opacity-70"
       ></div>
       <section
         id="start-modal"
-        class="absolute bg-dark-prim w-3/4 h-auto p-8 rounded-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        class="hidden absolute bg-dark-prim w-3/4 h-auto p-8 rounded-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         <div
           id="start-modal-content"
@@ -60,6 +60,20 @@
           >
             SAVE
           </p>
+        </div>
+      </section>
+
+      <section
+        id="notif"
+        class="absolute bottom-8 right-8 bg-green-notif w-[370px] h-[100px] rounded-2xl flex items-center p-5 border-2 border-transparent hover:border-2 hover:border-light-prim"
+      >
+        <div>
+          <p id="notif-text" class="text-light-prim">
+            Tu as améliorer le niveau Pizza au niveau 3.
+          </p>
+        </div>
+        <div class="w-20">
+          <img src="./assets/images/HandGesture3D/PNG/Thumbs_Up.png" alt="" />
         </div>
       </section>
 
