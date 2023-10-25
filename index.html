@@ -6,11 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title>Cookie Clicker</title>
-    <script type="module" crossorigin src="/cookie-clicker/assets/main-ea8d5a78.js"></script>
-    <link rel="stylesheet" href="/cookie-clicker/assets/index-49db8db6.css">
+    <script type="module" crossorigin src="/cookie-clicker/assets/main-e1bd1229.js"></script>
+    <link rel="stylesheet" href="/cookie-clicker/assets/index-773605c8.css">
   </head>
   <body class="bg-dark-prim font-Montserrat-Medium overflow-hidden">
     <main class="flex h-screen">
+      <!-- START MODAL -->
+      <div
+        id="overlay"
+        class="bg-black absolute w-full h-full top-0 left-0 opacity-70"
+      ></div>
+      <section
+        id="start-modal"
+        class="absolute bg-dark-prim w-3/4 h-auto p-8 rounded-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        <div
+          id="start-modal-content"
+          class="text-light-prim font-Montserrat-Regular flex flex-col gap-5"
+        >
+          <h1 class="font-Zcool text-6xl self-center mb-5">Cody Clicker</h1>
+          <input
+            type="text"
+            name="username"
+            id="start-modal-input-username"
+            class="self-start p-2 w-3/12 rounded-xl border-2 border-dark-sec bg-dark-prim outline-none placeholder:text-dark-sec"
+            placeholder="Your Username"
+          />
+
+          <h2 class="font-Zcool text-3xl">Regles du jeu</h2>
+          <p>
+            <span class="font-Montserrat-Bold">L'objectif du jeu :</span>
+            <br />Le but principal de Cody Clicker est d'augmenter le score
+            autant que possible. Vous commencez avec un score de 10 et vous
+            pouvez augmenter votre production de cookies en cliquant dessus ou
+            en achetant des améliorations.
+          </p>
+          <p>
+            <span class="font-Montserrat-Bold">Améliorations :</span> <br />Vous
+            pouvez dépenser votre score pour acheter des améliorations. Ces
+            améliorations augmentent votre production automatique, améliorent la
+            valeur de chaque clic, et apportent des avantages variés.
+          </p>
+          <p>
+            <span class="font-Montserrat-Bold">Easter eggs :</span><br />Le jeu
+            contient un/plusieurs secrets et easter eggs caché(s), alors
+            explorez et découvrez-le(s).
+          </p>
+          <p>
+            *Ce website utilise des cookies pour assurer une expérience
+            optimale.
+          </p>
+          <p
+            id="btn-start-modal"
+            class="font-Zcool text-xl border-2 border-dark-sec self-center px-6 py-3 rounded-lg hover:bg-dark-sec hover:cursor-pointer"
+          >
+            SAVE
+          </p>
+        </div>
+      </section>
+
       <section id="left-main" class="w-fit flex flex-col gap-5 p-8">
         <div
           id="level-overflow"
