@@ -1,14 +1,12 @@
 // lvl1.js
-import { getScore, getClicValue, setClicValue, updateState } from "./store.js";
-import { codyImages } from "./images.js";
-
-// const codyImage = document.getElementById("cody-lvl-1");
-
-// codyImage.addEventListener("click", () => {
-//     const currentScore = getScore();
-//     const currentClicValue = getClicValue();
-//     updateState({ score: currentScore + currentClicValue });
-// });
+import {
+  getScore,
+  getClicValue,
+  setClicValue,
+  updateState,
+  codyImage,
+} from "./store.js";
+import codyLvl1 from "../assets/images/Cody3D/png/Dreaming-Cody_3D.png";
 
 const cardPizzaElement = document.getElementById("card-pizza");
 const costPizzaElement = document.getElementById("cost-pizza");
@@ -56,7 +54,7 @@ cardPizzaElement.onclick = function () {
       case 6:
         lvlPizzaElement.textContent = "MAX";
         costPizzaElement.textContent = "-";
-        codyImage.src = codyImages[0];
+        codyImage.src = codyLvl1;
         break;
     }
   }

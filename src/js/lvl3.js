@@ -1,20 +1,12 @@
-// lvl1.js
+// lvl3.js
 import {
   getScore,
   getClicValue,
   setClicValue,
   updateState,
-  autoClicker,
+  codyImage,
 } from "./store.js";
-import { codyImages } from "./images.js";
-
-// const codyImage = document.getElementById("cody-lvl-1");
-
-// codyImage.addEventListener("click", () => {
-//   const currentScore = getScore();
-//   const currentClicValue = getClicValue();
-//   updateState({ score: currentScore + currentClicValue });
-// });
+import codyLvl3 from "../assets/images/Cody3D/png/Angry-Cody_3D.png";
 
 const cardCoffeeElement = document.getElementById("card-coffee");
 const costCoffeeElement = document.getElementById("cost-coffee");

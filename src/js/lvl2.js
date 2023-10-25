@@ -1,14 +1,12 @@
-// lvl1.js
-import { getScore, getClicValue, setClicValue, updateState } from "./store.js";
-import { codyImages } from "./images.js";
-
-// const codyImage = document.getElementById("cody-lvl-1");
-
-// codyImage.addEventListener("click", () => {
-//   const currentScore = getScore();
-//   const currentClicValue = getClicValue();
-//   updateState({ score: currentScore + currentClicValue });
-// });
+// lvl2.js
+import {
+  getScore,
+  getClicValue,
+  setClicValue,
+  updateState,
+  codyImage,
+} from "./store.js";
+import codyLvl2 from "../assets/images/Cody3D/png/Furious-Cody_3D.png";
 
 const cardBurgerElement = document.getElementById("card-burger");
 const costBurgerElement = document.getElementById("cost-burger");

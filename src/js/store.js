@@ -50,3 +50,5 @@ export function autoClicker() {
     setInterval(autoClickerIncr, 1000);
   }
 }
+
+export const codyImage = document.getElementById("cody");
