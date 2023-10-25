@@ -77,11 +77,11 @@ cardPizzaElement.onclick = function () {
       case 1:
         costPizza = 10;
         costPizzaElement.textContent = costPizza;
-
         break;
       case 2:
         costPizza = 50;
         costPizzaElement.textContent = costPizza;
+
         break;
       case 3:
         costPizza = 100;
