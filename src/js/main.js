@@ -14,6 +14,7 @@ import codyLvl11 from "../assets/images/Cody3D/png/Heart-Cody_3D.png";
 
 // VAR GEN
 let scoreElement = document.getElementById("score");
+
 let score = 50000000;
 let clicValue = 0;
 let autoClicBoolean = false;
