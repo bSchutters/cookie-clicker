@@ -147,6 +147,7 @@ let costCoffee = 500;
 let lvlCoffeeElement = document.getElementById("lvl-coffee");
 let lvlCoffee = 1;
 lvlCoffeeElement.textContent = lvlCoffee;
+costCoffeeElement.textContent = costCoffee;
 
 cardCoffeeElement.onclick = function () {
   if (lvlCoffee <= 5 && score >= costCoffee) {
