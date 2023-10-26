@@ -38,7 +38,9 @@ cardCoffeeElement.onclick = function () {
     const newClicValue = currentClicValue + autoClicValue;
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-coffee");
+    setInterval(() => {
+      updateCostTextColor("cost-coffe");
+    }, 1000);
 
     switch (lvlCoffee) {
       case 1:

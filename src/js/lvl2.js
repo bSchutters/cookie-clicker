@@ -32,7 +32,9 @@ cardBurgerElement.onclick = function () {
     const newClicValue = currentClicValue + 2;
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-burger");
+    setInterval(() => {
+      updateCostTextColor("cost-burger");
+    }, 1000);
 
     switch (lvlBurger) {
       case 1:

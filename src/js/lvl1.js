@@ -32,9 +32,17 @@ cardPizzaElement.onclick = function () {
     const newClicValue = currentClicValue + 1;
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-pizza");
+    setInterval(() => {
+      updateCostTextColor("cost-pizza");
+    }, 1000);
     switch (lvlPizza) {
       case 1:
+        if (getScore() >= parseInt(costElement.textContent)) {
+          costElement.classList.add("text-cost-green");
+        } else {
+          costElement.classList.remove("text-cost-green");
+        }
+
         costPizza = 10;
         costPizzaElement.textContent = costPizza;
         break;

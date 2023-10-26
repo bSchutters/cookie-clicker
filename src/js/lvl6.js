@@ -38,7 +38,9 @@ cardHotDogElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-HotDog");
+    setInterval(() => {
+      updateCostTextColor("cost-HotDog");
+    }, 1000);
 
     switch (lvlHotDog) {
       case 1:

@@ -38,7 +38,9 @@ cardMilkElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-milk");
+    setInterval(() => {
+      updateCostTextColor("cost-milk");
+    }, 1000);
 
     switch (lvlMilk) {
       case 1:

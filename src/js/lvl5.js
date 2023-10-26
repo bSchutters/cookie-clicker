@@ -38,7 +38,9 @@ cardFriesElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-fries");
+    setInterval(() => {
+      updateCostTextColor("cost-fries");
+    }, 1000);
 
     switch (lvlFries) {
       case 1:

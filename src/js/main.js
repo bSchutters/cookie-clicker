@@ -38,7 +38,7 @@ function scoreComponent(state) {
 subscribe(scoreComponent);
 
 // Modifiez l'état
-updateState({ score: 100000000000000 });
+updateState({ score: 100 });
 
 // Modifiez la valeur de clic
 setClicValue(0);

@@ -38,7 +38,9 @@ cardMuffinElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-muffin");
+    setInterval(() => {
+      updateCostTextColor("cost-milk");
+    }, 1000);
 
     switch (lvlMuffin) {
       case 1:

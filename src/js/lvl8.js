@@ -38,7 +38,9 @@ cardKebabElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-kebab");
+    setInterval(() => {
+      updateCostTextColor("cost-kebab");
+    }, 1000);
 
     switch (lvlKebab) {
       case 1:

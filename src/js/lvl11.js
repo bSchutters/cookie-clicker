@@ -38,7 +38,9 @@ cardSandwichElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-sandwich");
+    setInterval(() => {
+      updateCostTextColor("cost-sandwich");
+    }, 1000);
 
     switch (lvlSandwich) {
       case 1:

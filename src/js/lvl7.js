@@ -38,7 +38,9 @@ cardIceCreamElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-ice");
+    setInterval(() => {
+      updateCostTextColor("cost-ice");
+    }, 1000);
 
     switch (lvlIceCream) {
       case 1:
