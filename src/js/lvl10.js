@@ -5,6 +5,11 @@ import {
   setClicValue,
   updateState,
   codyImage,
+  setAutoClickValue,
+  autoClickValue,
+  txtAT,
+  updateClicValueText,
+  updateCostTextColor,
 } from "./store.js";
 import codyLvl10 from "../assets/images/Cody3D/png/Wink-Cody_3D.png";
 
@@ -28,7 +33,12 @@ cardMuffinElement.onclick = function () {
 
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 5000;
+    if (lvlMuffin === 2) {
+      setAutoClickValue(autoClickValue + 100000);
+    }
     setClicValue(newClicValue);
+    updateClicValueText();
+    updateCostTextColor("cost-muffin");
 
     switch (lvlMuffin) {
       case 1:
@@ -36,10 +46,9 @@ cardMuffinElement.onclick = function () {
         costMuffinElement.textContent = costMuffin;
         break;
       case 2:
-        autoClicValue = autoClicValue + 100000;
         costMuffin = 10000000;
         costMuffinElement.textContent = costMuffin;
-        ATRate.innerText = "True - 113613 CPS";
+        txtAT("True - 113613 CPS");
         break;
       case 3:
         costMuffin = 20000000;

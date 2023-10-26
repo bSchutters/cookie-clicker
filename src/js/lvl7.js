@@ -5,6 +5,11 @@ import {
   setClicValue,
   updateState,
   codyImage,
+  setAutoClickValue,
+  autoClickValue,
+  txtAT,
+  updateClicValueText,
+  updateCostTextColor,
 } from "./store.js";
 import codyLvl7 from "../assets/images/Cody3D/png/Happy-Cody_3D.png";
 
@@ -28,7 +33,12 @@ cardIceCreamElement.onclick = function () {
 
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 1250;
+    if (lvlIceCream === 2) {
+      setAutoClickValue(autoClickValue + 1000);
+    }
     setClicValue(newClicValue);
+    updateClicValueText();
+    updateCostTextColor("cost-ice");
 
     switch (lvlIceCream) {
       case 1:
@@ -36,10 +46,9 @@ cardIceCreamElement.onclick = function () {
         costIceCreamElement.textContent = costIceCream;
         break;
       case 2:
-        autoClicValue = autoClicValue + 1000;
         costIceCream = 100000;
         costIceCreamElement.textContent = costIceCream;
-        ATRate.innerText = "True - 1113 CPS";
+        txtAT("True - 1113 CPS");
         break;
       case 3:
         costIceCream = 200000;

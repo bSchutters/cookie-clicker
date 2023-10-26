@@ -5,6 +5,8 @@ import {
   setClicValue,
   updateState,
   codyImage,
+  updateClicValueText,
+  updateCostTextColor,
 } from "./store.js";
 import codyLvl1 from "../assets/images/Cody3D/png/Dreaming-Cody_3D.png";
 
@@ -29,7 +31,8 @@ cardPizzaElement.onclick = function () {
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 1;
     setClicValue(newClicValue);
-
+    updateClicValueText();
+    updateCostTextColor("cost-pizza");
     switch (lvlPizza) {
       case 1:
         costPizza = 10;

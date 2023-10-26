@@ -5,6 +5,8 @@ import {
   setClicValue,
   updateState,
   codyImage,
+  updateClicValueText,
+  updateCostTextColor,
 } from "./store.js";
 import codyLvl2 from "../assets/images/Cody3D/png/Furious-Cody_3D.png";
 
@@ -29,6 +31,8 @@ cardBurgerElement.onclick = function () {
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 2;
     setClicValue(newClicValue);
+    updateClicValueText();
+    updateCostTextColor("cost-burger");
 
     switch (lvlBurger) {
       case 1:

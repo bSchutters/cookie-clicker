@@ -5,6 +5,11 @@ import {
   setClicValue,
   updateState,
   codyImage,
+  setAutoClickValue,
+  autoClickValue,
+  txtAT,
+  updateClicValueText,
+  updateCostTextColor,
 } from "./store.js";
 import codyLvl6 from "../assets/images/Cody3D/png/Poker-Cody_3D.png";
 
@@ -28,7 +33,12 @@ cardHotDogElement.onclick = function () {
 
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 1000;
+    if (lvlHotDog === 2) {
+      setAutoClickValue(autoClickValue + 100);
+    }
     setClicValue(newClicValue);
+    updateClicValueText();
+    updateCostTextColor("cost-HotDog");
 
     switch (lvlHotDog) {
       case 1:
@@ -36,10 +46,9 @@ cardHotDogElement.onclick = function () {
         costHotDogElement.textContent = costHotDog;
         break;
       case 2:
-        autoClicValue = autoClicValue + 100;
         costHotDog = 30000;
         costHotDogElement.textContent = costHotDog;
-        ATRate.innerText = "True - 113 CPS";
+        txtAT("True - 113 CPS");
         break;
       case 3:
         costHotDog = 60000;

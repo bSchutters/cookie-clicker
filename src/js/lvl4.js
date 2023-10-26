@@ -1,10 +1,19 @@
 // lvl4.js
 import {
   getScore,
-  getClicValue,
   setClicValue,
   updateState,
   codyImage,
+  autoClicker,
+  getClicValue,
+  autoClickerActive,
+  autoClickValue,
+  activateAutoClicker,
+  deactivateAutoClicker,
+  setAutoClickValue,
+  txtAT,
+  updateClicValueText,
+  updateCostTextColor,
 } from "./store.js";
 import codyLvl4 from "../assets/images/Cody3D/png/Devil-Cody_3D.png";
 
@@ -28,7 +37,13 @@ cardDorayakiElement.onclick = function () {
 
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 50;
+
+    if (lvlDorayaki === 2) {
+      setAutoClickValue(autoClickValue + 2);
+    }
     setClicValue(newClicValue);
+    updateClicValueText();
+    updateCostTextColor("cost-dorayaki");
 
     switch (lvlDorayaki) {
       case 1:
@@ -36,10 +51,9 @@ cardDorayakiElement.onclick = function () {
         costDorayakiElement.textContent = costDorayaki;
         break;
       case 2:
-        autoClicValue = autoClicValue + 2;
         costDorayaki = 2000;
         costDorayakiElement.textContent = costDorayaki;
-        ATRate.innerText = "True - 3 CPS";
+        txtAT("True - 3 CPS");
         break;
       case 3:
         costDorayaki = 4000;

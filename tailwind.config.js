@@ -11,6 +11,7 @@ export default {
       "red-notif": "#4B0319",
       "innactif-bg": "#1D1D1D",
       "innactif-txt": "#383838",
+      "cost-green": "#039124",
       black: "#000000",
       transparent: "transparent",
     },
