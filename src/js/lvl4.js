@@ -43,7 +43,9 @@ cardDorayakiElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    updateCostTextColor("cost-dorayaki");
+    setInterval(() => {
+      updateCostTextColor("cost-dorayaki");
+    }, 1000);
 
     switch (lvlDorayaki) {
       case 1:
