@@ -1,6 +1,8 @@
 // store.js
 //var global
 export const scoreElement = document.getElementById("score");
+export const codyImage = document.getElementById("cody");
+
 // Définition du store
 const state = {
   score: 0,
@@ -41,14 +43,13 @@ export function setClicValue(newValue) {
   updateState({ clicValue: newValue });
 }
 
-export function autoClicker() {
+/*export function autoClicker() {
   if (autoClicBoolean === true) {
     function autoClickerIncr() {
-      score = score + autoClicValue;
-      scoreElement.textContent = score;
+      state.score += autoClicValue;
+      scoreElement.textContent = state.score;
     }
     setInterval(autoClickerIncr, 1000);
   }
-}
+}*/
 
-export const codyImage = document.getElementById("cody");
