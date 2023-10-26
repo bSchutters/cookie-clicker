@@ -24,6 +24,7 @@ import {
   setClicValue,
   subscribe,
   updateState,
+  updateCostTextColor,
 } from "./store.js";
 
 let clicRate = document.getElementById("clic");
@@ -38,7 +39,7 @@ function scoreComponent(state) {
 subscribe(scoreComponent);
 
 // Modifiez l'état
-updateState({ score: 100 });
+updateState({ score: 1000000000 });
 
 // Modifiez la valeur de clic
 setClicValue(0);

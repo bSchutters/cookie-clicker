@@ -35,6 +35,7 @@ cardPizzaElement.onclick = function () {
     setInterval(() => {
       updateCostTextColor("cost-pizza");
     }, 1000);
+
     switch (lvlPizza) {
       case 1:
         costPizza = 10;

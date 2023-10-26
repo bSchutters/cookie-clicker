@@ -64,13 +64,16 @@ export function deactivateAutoClicker() {
 export function txtAT(text) {
   ATRate.innerText = text;
 }
+
 export function updateCostTextColor(itemID) {
   const costElement = document.getElementById(itemID);
 
   if (getScore() >= parseInt(costElement.textContent)) {
+    costElement.classList.remove("text-color-accent");
     costElement.classList.add("text-cost-green");
   } else {
     costElement.classList.remove("text-cost-green");
+    costElement.classList.add("text-color-accent");
   }
 }
 
