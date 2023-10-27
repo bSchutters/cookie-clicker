@@ -1,7 +1,19 @@
 import "../css/style.css";
 import "./store.js"; // Importez le store
-import { scoreElement, codyImage } from "./store.js";
-
+import {
+  getScore,
+  getClicValue,
+  setClicValue,
+  subscribe,
+  updateState,
+  scoreElement,
+  codyImage,
+  userName,
+  btnStartModal,
+  overlayStartModal,
+  startModal,
+  notif,
+} from "./store.js";
 import "./lvl1.js"; // Importez le niveau 1
 import "./lvl2.js"; // Importez le niveau 2
 import "./lvl3.js"; // Importez le niveau 3
@@ -16,22 +28,90 @@ import "./lvl11.js"; // Importez le niveau 11
 // ... Importez d'autres niveaux si nécessaire ...
 
 // app.js
+//Composant qui garde getUserName
+function getUserName() {
+  const user = userName.value;
 
-import {
-  getScore,
-  getClicValue,
-  setClicValue,
-  subscribe,
-  updateState,
-  updateCostTextColor,
-  getCostById,
-  updateCostColors,
-} from "./store.js";
+  // Stocker le username dans le localStorage
+  localStorage.setItem("userName", user);
+}
 
-let clicRate = document.getElementById("clic");
-let ATRate = document.getElementById("auto-clic");
+// Abonnez le composant à l'état
+subscribe(getUserName);
 
-// Composant qui affiche le score
+// Récupérer username depuis le localStorage s'il existe
+const storeUser = localStorage.getItem("userName");
+if (storeUser !== null) {
+  updateState(userName);
+} else {
+  updateState("???");
+}
+
+// Composant qui affiche et garde le score
+function scoreComponent(state) {
+  scoreElement.textContent = state.score;
+
+  // Stocker le score dans le localStorage
+  localStorage.setItem("score", state.score.toString());
+}
+
+// Abonnez le composant à l'état
+subscribe(scoreComponent);
+
+// Récupérer le score depuis le localStorage s'il existe
+if (storedScore !== null) {
+  updateState({ score: parseInt(storedScore, 10) });
+} else {
+  // Si le score n'existe pas dans le localStorage, initialisez-le
+  updateState({ score: 10 });
+}
+
+// Composant qui affiche et garde les bonus
+function getLvlAndCostValues() {
+  // Créez un objet pour stocker les valeurs
+  const valuesToStore = {};
+
+  const rankLvlElements = document.getElementsByClassName("rank");
+  const costElements = document.getElementsByClassName("cost");
+
+  for (let i = 0; i < rankLvlElements.length; i++) {
+    const rankValue = rankLvlElements[i].textContent;
+    const costValue = costElements[i].textContent;
+    valuesToStore[`rank${i}`] = rankValue;
+    valuesToStore[`cost${i}`] = costValue;
+  }
+
+  // Convertissez l'objet en une chaîne JSON pour le stocker dans le localStorage
+  const serializedValues = JSON.stringify(valuesToStore);
+
+  // Enregistrez la chaîne JSON dans le localStorage
+  localStorage.setItem("rankLvlCostValues", serializedValues);
+}
+
+// Abonnez le composant à l'état
+subscribe(getLvlAndCostValues);
+
+// Récupérez la chaîne JSON du localStorage
+const storedData = localStorage.getItem("rankLvlCostValues");
+
+if (storedData !== null) {
+  // 1 Désérialisez la chaîne JSON en un objet JavaScript
+  const rankLvlCostValues = JSON.parse(storedData);
+
+  // 2 Utilisez l'objet pour mettre à jour les éléments HTML correspondants
+  const rankLvlElements = document.getElementsByClassName("rank");
+  const costElements = document.getElementsByClassName("cost");
+
+  for (let i = 0; i < rankLvlElements.length; i++) {
+    if (rankLvlCostValues[`rank${i}`]) {
+      rankLvlElements[i].textContent = rankLvlCostValues[`rank${i}`];
+    }
+    if (rankLvlCostValues[`cost${i}`]) {
+      costElements[i].textContent = rankLvlCostValues[`cost${i}`];
+    }
+  }
+}
+
 // Composant qui affiche le score
 function scoreComponent(state) {
   scoreElement.textContent = state.score;
