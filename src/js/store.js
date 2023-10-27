@@ -14,6 +14,13 @@ export function setAutoClickValue(newValue) {
 }
 
 export const codyImage = document.getElementById("cody");
+export const userName = document.getElementById("start-modal-input-username");
+export const startModal = document.getElementById("start-modal");
+export const btnStartModal = document.getElementById("btn-start-modal");
+export const overlayStartModal = document.getElementById("overlay");
+
+export const notif = document.getElementById("notif");
+
 
 // Définition du store
 const state = {
