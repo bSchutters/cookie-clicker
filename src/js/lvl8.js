@@ -5,6 +5,13 @@ import {
   setClicValue,
   updateState,
   codyImage,
+  setAutoClickValue,
+  autoClickValue,
+  txtAT,
+  updateClicValueText,
+  updateCostTextColor,
+  itemsToWatch,
+  updateCostColors,
 } from "./store.js";
 import codyLvl8 from "../assets/images/Cody3D/png/Smile-Cody_3D.png";
 
@@ -14,6 +21,10 @@ const lvlKebabElement = document.getElementById("lvl-kebab");
 
 let lvlKebab = 1;
 let costKebab = 200000;
+const KebabItem = itemsToWatch.find((item) => item.id === "cost-kebab");
+if (KebabItem) {
+  KebabItem.cost = () => costKebab;
+}
 
 lvlKebabElement.textContent = lvlKebab;
 costKebabElement.textContent = costKebab;
@@ -28,7 +39,12 @@ cardKebabElement.onclick = function () {
 
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 1500;
+    if (lvlKebab === 2) {
+      setAutoClickValue(autoClickValue + 2500);
+    }
     setClicValue(newClicValue);
+    updateClicValueText();
+    updateCostColors();
 
     switch (lvlKebab) {
       case 1:
@@ -36,10 +52,9 @@ cardKebabElement.onclick = function () {
         costKebabElement.textContent = costKebab;
         break;
       case 2:
-        autoClicValue = autoClicValue + 2500;
         costKebab = 400000;
         costKebabElement.textContent = costKebab;
-        ATRate.innerText = "True - 3613 CPS";
+        txtAT("True - 3613 CPS");
         break;
       case 3:
         costKebab = 800000;

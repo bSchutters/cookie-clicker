@@ -5,6 +5,13 @@ import {
   setClicValue,
   updateState,
   codyImage,
+  setAutoClickValue,
+  autoClickValue,
+  txtAT,
+  updateClicValueText,
+  updateCostTextColor,
+  updateCostColors,
+  itemsToWatch,
 } from "./store.js";
 import codyLvl11 from "../assets/images/Cody3D/png/Heart-Cody_3D.png";
 
@@ -14,6 +21,10 @@ const lvlSandwichElement = document.getElementById("lvl-sandwich");
 
 let lvlSandwich = 1;
 let costSandwich = 100000000;
+const SandwichItem = itemsToWatch.find((item) => item.id === "cost-sandwich");
+if (SandwichItem) {
+  SandwichItem.cost = () => costSandwich;
+}
 
 lvlSandwichElement.textContent = lvlSandwich;
 costSandwichElement.textContent = costSandwich;
@@ -28,7 +39,12 @@ cardSandwichElement.onclick = function () {
 
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 50000;
+    if (lvlSandwich === 2) {
+      setAutoClickValue(autoClickValue + 250000);
+    }
     setClicValue(newClicValue);
+    updateClicValueText();
+    updateCostColors();
 
     switch (lvlSandwich) {
       case 1:
@@ -36,10 +52,9 @@ cardSandwichElement.onclick = function () {
         costSandwichElement.textContent = costSandwich;
         break;
       case 2:
-        autoClicValue = autoClicValue + 250000;
         costSandwich = 1000000000;
         costSandwichElement.textContent = costSandwich;
-        ATRate.innerText = "True - 363613 CPS";
+        txtAT("True - 363613 CPS");
         break;
       case 3:
         costSandwich = 10000000000;

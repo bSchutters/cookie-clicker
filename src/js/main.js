@@ -23,6 +23,9 @@ import {
   setClicValue,
   subscribe,
   updateState,
+  updateCostTextColor,
+  getCostById,
+  updateCostColors,
 } from "./store.js";
 
 let clicRate = document.getElementById("clic");
@@ -56,6 +59,7 @@ codyImage.addEventListener("click", () => {
   const currentScore = getScore();
   const currentClicValue = getClicValue();
   updateState({ score: currentScore + currentClicValue });
+  updateCostColors();
 });
 
 const startModal = document.getElementById("start-modal");
