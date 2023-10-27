@@ -14,6 +14,7 @@ import {
   startModal,
   notif,
 } from "./store.js";
+
 import "./lvl1.js"; // Importez le niveau 1
 import "./lvl2.js"; // Importez le niveau 2
 import "./lvl3.js"; // Importez le niveau 3
@@ -28,6 +29,7 @@ import "./lvl11.js"; // Importez le niveau 11
 // ... Importez d'autres niveaux si nécessaire ...
 
 // app.js
+
 //Composant qui garde getUserName
 function getUserName() {
   const user = userName.value;
@@ -113,6 +115,7 @@ if (storedData !== null) {
 }
 
 // Composant qui affiche le score
+
 function scoreComponent(state) {
   scoreElement.textContent = state.score;
 
@@ -128,12 +131,60 @@ const storedScore = localStorage.getItem("score");
 if (storedScore !== null) {
   updateState({ score: parseInt(storedScore, 10) });
 } else {
-  // Si le score n'existe pas dans le localStorage, initialisez-le
-  updateState({ score: 100000000 });
+
+    // Si le score n'existe pas dans le localStorage, initialisez-le
+    updateState({score: 10});
 }
 
+// Composant qui affiche et garde les bonus
+function getLvlAndCostValues() {
+    // Créez un objet pour stocker les valeurs
+    const valuesToStore = {};
+
+    const rankLvlElements = document.getElementsByClassName("rank");
+    const costElements = document.getElementsByClassName("cost");
+
+    for (let i = 0; i < rankLvlElements.length; i++) {
+        const rankValue = rankLvlElements[i].textContent;
+        const costValue = costElements[i].textContent;
+        valuesToStore[`rank${i}`] = rankValue;
+        valuesToStore[`cost${i}`] = costValue;
+    }
+
+    // Convertissez l'objet en une chaîne JSON pour le stocker dans le localStorage
+    const serializedValues = JSON.stringify(valuesToStore);
+
+    // Enregistrez la chaîne JSON dans le localStorage
+    localStorage.setItem("rankLvlCostValues", serializedValues);
+}
+
+// Abonnez le composant à l'état
+subscribe(getLvlAndCostValues);
+
+// Récupérez la chaîne JSON du localStorage
+const storedData = localStorage.getItem('rankLvlCostValues');
+
+if (storedData !== null) {
+    // 1 Désérialisez la chaîne JSON en un objet JavaScript
+    const rankLvlCostValues = JSON.parse(storedData);
+
+    // 2 Utilisez l'objet pour mettre à jour les éléments HTML correspondants
+    const rankLvlElements = document.getElementsByClassName("rank");
+    const costElements = document.getElementsByClassName("cost");
+
+    for (let i = 0; i < rankLvlElements.length; i++) {
+        if (rankLvlCostValues[`rank${i}`]) {
+            rankLvlElements[i].textContent = rankLvlCostValues[`rank${i}`];
+        }
+        if (rankLvlCostValues[`cost${i}`]) {
+            costElements[i].textContent = rankLvlCostValues[`cost${i}`];
+        }
+    }
+}
+
+
 // Modifiez la valeur de clic
-setClicValue(0);
+setClicValue(1);
 
 codyImage.addEventListener("click", () => {
   const currentScore = getScore();
@@ -142,11 +193,13 @@ codyImage.addEventListener("click", () => {
   updateCostColors();
 });
 
+
 const startModal = document.getElementById("start-modal");
 const btnStartModal = document.getElementById("btn-start-modal");
 const overlayStartModal = document.getElementById("overlay");
 const btnInfoRules = document.getElementById("info-rules");
 const btnInfoRulesMobile = document.getElementById("info-rules-mobile");
+
 
 btnStartModal.onclick = function () {
   overlayStartModal.classList.add("hidden");
@@ -162,7 +215,6 @@ btnInfoRulesMobile.onclick = function () {
   startModal.classList.remove("hidden");
 };
 
-const notif = document.getElementById("notif");
 
 notif.onclick = function () {
   notif.classList.add("hidden");
