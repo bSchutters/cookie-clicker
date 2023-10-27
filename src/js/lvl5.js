@@ -12,6 +12,7 @@ import {
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
+  showNotification,
 } from "./store.js";
 import codyLvl5 from "../assets/images/Cody3D/png/Surprised-Cody_3D.png";
 
@@ -56,6 +57,7 @@ cardFriesElement.onclick = function () {
         costFries = 10000;
         costFriesElement.textContent = costFries;
         txtAT("True - 13 CPS");
+        showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:
         costFries = 20000;
@@ -73,6 +75,7 @@ cardFriesElement.onclick = function () {
         lvlFriesElement.textContent = "MAX";
         costFriesElement.textContent = "-";
         codyImage.src = codyLvl5;
+        showNotification("Vous avez atteint le niveau max, GG !");
         break;
     }
   }

@@ -12,6 +12,7 @@ import {
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
+  showNotification,
 } from "./store.js";
 import codyLvl11 from "../assets/images/Cody3D/png/Heart-Cody_3D.png";
 
@@ -55,6 +56,7 @@ cardSandwichElement.onclick = function () {
         costSandwich = 1000000000;
         costSandwichElement.textContent = costSandwich;
         txtAT("True - 363613 CPS");
+        showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:
         costSandwich = 10000000000;
@@ -72,6 +74,7 @@ cardSandwichElement.onclick = function () {
         lvlSandwichElement.textContent = "MAX";
         costSandwichElement.textContent = "-";
         codyImage.src = codyLvl11;
+        showNotification("Vous avez atteint le dernier niveau ! ");
         break;
     }
   }

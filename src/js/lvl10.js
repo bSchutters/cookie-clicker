@@ -12,6 +12,7 @@ import {
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
+  showNotification,
 } from "./store.js";
 import codyLvl10 from "../assets/images/Cody3D/png/Wink-Cody_3D.png";
 
@@ -55,6 +56,7 @@ cardMuffinElement.onclick = function () {
         costMuffin = 10000000;
         costMuffinElement.textContent = costMuffin;
         txtAT("True - 113613 CPS");
+        showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:
         costMuffin = 20000000;
@@ -72,6 +74,7 @@ cardMuffinElement.onclick = function () {
         lvlMuffinElement.textContent = "MAX";
         costMuffinElement.textContent = "-";
         codyImage.src = codyLvl10;
+        showNotification("Vous avez atteint le niveau max, GG !");
         break;
     }
   }

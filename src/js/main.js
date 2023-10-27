@@ -82,12 +82,6 @@ btnInfoRulesMobile.onclick = function () {
   startModal.classList.remove("hidden");
 };
 
-const notif = document.getElementById("notif");
-
-notif.onclick = function () {
-  notif.classList.add("hidden");
-};
-
 //MENU BURGER OPEN CLOSE
 
 const iconBurgerMenu = document.getElementById("icon-burger-mobile");

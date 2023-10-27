@@ -14,6 +14,7 @@ import {
   updateCostTextColor,
   itemsToWatch,
   updateCostColors,
+  showNotification,
 } from "./store.js";
 import codyLvl3 from "../assets/images/Cody3D/png/Angry-Cody_3D.png";
 
@@ -57,6 +58,7 @@ cardCoffeeElement.onclick = function () {
         costCoffeeElement.textContent = costCoffee;
         setInterval(autoClicker, 1000);
         txtAT("True - 1 CPS");
+        showNotification("Vous avez debloquer, l'autoclicker !");
         break;
       case 3:
         costCoffee = 2500;
@@ -74,6 +76,7 @@ cardCoffeeElement.onclick = function () {
         lvlCoffeeElement.textContent = "MAX";
         costCoffeeElement.textContent = "-";
         codyImage.src = codyLvl3;
+        showNotification("Vous avez atteint le niveau max, GG !");
         break;
     }
   }

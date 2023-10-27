@@ -9,6 +9,7 @@ import {
   updateCostTextColor,
   itemsToWatch,
   updateCostColors,
+  showNotification,
 } from "./store.js";
 import codyLvl2 from "../assets/images/Cody3D/png/Furious-Cody_3D.png";
 
@@ -62,6 +63,7 @@ cardBurgerElement.onclick = function () {
         costBurgerElement.textContent = costBurger;
         break;
       case 6:
+        showNotification("Vous avez atteint le niveau max, GG !");
         lvlBurgerElement.textContent = "MAX";
         costBurgerElement.textContent = "-";
         codyImage.src = codyLvl2;

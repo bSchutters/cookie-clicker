@@ -12,6 +12,7 @@ import {
   updateCostTextColor,
   itemsToWatch,
   updateCostColors,
+  showNotification,
 } from "./store.js";
 import codyLvl8 from "../assets/images/Cody3D/png/Smile-Cody_3D.png";
 
@@ -55,6 +56,7 @@ cardKebabElement.onclick = function () {
         costKebab = 400000;
         costKebabElement.textContent = costKebab;
         txtAT("True - 3613 CPS");
+        showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:
         costKebab = 800000;
@@ -72,6 +74,7 @@ cardKebabElement.onclick = function () {
         lvlKebabElement.textContent = "MAX";
         costKebabElement.textContent = "-";
         codyImage.src = codyLvl8;
+        showNotification("Vous avez atteint le niveau max, GG !");
         break;
     }
   }

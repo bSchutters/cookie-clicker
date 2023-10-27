@@ -15,7 +15,6 @@ export function setAutoClickValue(newValue) {
 
 export const codyImage = document.getElementById("cody");
 
-
 // Définition du store
 const state = {
   score: 0,
@@ -57,7 +56,6 @@ export function setClicValue(newValue) {
   updateState({ clicValue: newValue });
 }
 
-
 // Fonction pour activer l'autoclicker
 export function activateAutoClicker() {
   autoClickerActive = true;
@@ -95,17 +93,9 @@ export function updateCostColors() {
   for (const item of itemsToWatch) {
     if (item.cost) {
       updateCostTextColor(item.id, item.cost());
-
-/*export function autoClicker() {
-  if (autoClicBoolean === true) {
-    function autoClickerIncr() {
-      state.score += autoClicValue;
-      scoreElement.textContent = state.score;
-
     }
   }
-}*/
-
+}
 
 export function updateCostTextColor(itemID, cost) {
   const costElement = document.getElementById(itemID);
@@ -140,5 +130,16 @@ function updateClicValueText() {
 
 export { updateClicValueText };
 
-export const codyImage = document.getElementById("cody");
+//notification
 
+const notif = document.getElementById("notif");
+const notifText = document.getElementById("notif-text"); // Cibler l'élément avec l'ID "notif-text"
+
+export function showNotification(message) {
+  notifText.textContent = message; // Mettre à jour le texte de "notif-text"
+  notif.classList.remove("hidden");
+}
+
+notif.onclick = function () {
+  notif.classList.add("hidden");
+};

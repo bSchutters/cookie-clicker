@@ -12,6 +12,7 @@ import {
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
+  showNotification,
 } from "./store.js";
 import codyLvl6 from "../assets/images/Cody3D/png/Poker-Cody_3D.png";
 
@@ -55,6 +56,7 @@ cardHotDogElement.onclick = function () {
         costHotDog = 30000;
         costHotDogElement.textContent = costHotDog;
         txtAT("True - 113 CPS");
+        showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:
         costHotDog = 60000;
@@ -72,6 +74,7 @@ cardHotDogElement.onclick = function () {
         lvlHotDogElement.textContent = "MAX";
         costHotDogElement.textContent = "-";
         codyImage.src = codyLvl6;
+        showNotification("Vous avez atteint le niveau max, GG !");
         break;
     }
   }

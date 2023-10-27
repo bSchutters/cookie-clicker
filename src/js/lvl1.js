@@ -9,6 +9,7 @@ import {
   updateCostTextColor,
   itemsToWatch,
   updateCostColors,
+  showNotification,
 } from "./store.js";
 import codyLvl1 from "../assets/images/Cody3D/png/Dreaming-Cody_3D.png";
 
@@ -65,6 +66,7 @@ cardPizzaElement.onclick = function () {
         lvlPizzaElement.textContent = "MAX";
         costPizzaElement.textContent = "-";
         codyImage.src = codyLvl1;
+        showNotification("Vous avez atteint le niveau max, GG !");
         break;
     }
     if (lvlPizza <= 5) {

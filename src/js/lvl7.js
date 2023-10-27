@@ -12,6 +12,7 @@ import {
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
+  showNotification,
 } from "./store.js";
 import codyLvl7 from "../assets/images/Cody3D/png/Happy-Cody_3D.png";
 
@@ -54,6 +55,7 @@ cardIceCreamElement.onclick = function () {
         costIceCream = 100000;
         costIceCreamElement.textContent = costIceCream;
         txtAT("True - 1113 CPS");
+        showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:
         costIceCream = 200000;
@@ -71,6 +73,7 @@ cardIceCreamElement.onclick = function () {
         lvlIceCreamElement.textContent = "MAX";
         costIceCreamElement.textContent = "-";
         codyImage.src = codyLvl7;
+        showNotification("Vous avez atteint le niveau max, GG !");
         break;
     }
   }

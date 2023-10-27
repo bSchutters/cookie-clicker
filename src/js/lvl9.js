@@ -12,6 +12,7 @@ import {
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
+  showNotification,
 } from "./store.js";
 import codyLvl9 from "../assets/images/Cody3D/png/Laugh-Cody_3D.png";
 
@@ -53,8 +54,9 @@ cardMilkElement.onclick = function () {
         break;
       case 2:
         costMilk = 2000000;
-        costMilkElement.textContent = costKMilk;
+        costMilkElement.textContent = costMilk;
         txtAT("True - 13613 CPS");
+        showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:
         costMilk = 4000000;
@@ -72,6 +74,7 @@ cardMilkElement.onclick = function () {
         lvlMilkElement.textContent = "MAX";
         costMilkElement.textContent = "-";
         codyImage.src = codyLvl9;
+        showNotification("Vous avez atteint le niveau max, GG !");
         break;
     }
   }
