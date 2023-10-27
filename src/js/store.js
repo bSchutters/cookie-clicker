@@ -2,6 +2,12 @@
 
 // Var global pour élément HTML
 export const scoreElement = document.getElementById("score");
+export const codyImage = document.getElementById("cody");
+export const userName = document.getElementById("start-modal-input-username");
+export const startModal = document.getElementById("start-modal");
+export const btnStartModal = document.getElementById("btn-start-modal");
+export const overlayStartModal = document.getElementById("overlay");
+export const notif = document.getElementById("notif");
 
 const ATRate = document.getElementById("auto-clic"); // Élément pour afficher l'état de l'autoclicker
 
@@ -12,15 +18,6 @@ export let autoClickValue = 1;
 export function setAutoClickValue(newValue) {
   autoClickValue = newValue;
 }
-
-export const codyImage = document.getElementById("cody");
-export const userName = document.getElementById("start-modal-input-username");
-export const startModal = document.getElementById("start-modal");
-export const btnStartModal = document.getElementById("btn-start-modal");
-export const overlayStartModal = document.getElementById("overlay");
-
-export const notif = document.getElementById("notif");
-
 
 // Définition du store
 const state = {
@@ -103,16 +100,6 @@ export function updateCostColors() {
     }
   }
 }
-
-/*export function autoClicker() {
-  if (autoClicBoolean === true) {
-    function autoClickerIncr() {
-      state.score += autoClicValue;
-      scoreElement.textContent = state.score;
-
-    }
-  }
-}*/
 
 export function updateCostTextColor(itemID, cost) {
   const costElement = document.getElementById(itemID);
