@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script defer type="module" src="./js/main.js"></script>
+<<<<<<< HEAD
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -37,54 +38,91 @@
             class="self-start p-2 w-4/6 lg:w-3/12 rounded-xl border-2 border-dark-sec bg-dark-prim outline-none placeholder:text-dark-sec"
             placeholder="Your Username"
           />
+=======
+    <title>Cookie Clicker</title>
+</head>
+<body class="bg-dark-prim font-Montserrat-Medium overflow-hidden">
+<main class="flex h-screen">
+    <!-- START MODAL -->
+    <div
+            id="overlay"
+            class=" bg-black absolute w-full h-full top-0 left-0 opacity-70"
+    ></div>
+    <section
+            id="start-modal"
+            class=" absolute bg-dark-prim w-3/4 h-auto p-8 rounded-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    >
+        <div
+                id="start-modal-content"
+                class="text-light-prim font-Montserrat-Regular flex flex-col gap-5"
+        >
+            <h1 class="font-Zcool text-6xl self-center mb-5">Cody Clicker</h1>
+            <label for="start-modal-input-username" class="block text-white font-bold ">Your Username:</label>
+            <input
+                    type="text"
+                    name="username"
+                    id="start-modal-input-username"
+                    class="self-start p-2 w-3/12 rounded-xl border-2 border-dark-sec bg-dark-prim outline-none placeholder:text-dark-sec"
+                    placeholder="Your Username"
+            />
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
 
-          <h2 class="font-Zcool text-3xl">Regles du jeu</h2>
-          <p>
-            <span class="font-Montserrat-Bold">L'objectif du jeu :</span>
-            <br />Le but principal de Cody Clicker est d'augmenter le score
-            autant que possible. Vous commencez avec un score de 10 et vous
-            pouvez augmenter votre production de cookies en cliquant dessus ou
-            en achetant des améliorations.
-          </p>
-          <p>
-            <span class="font-Montserrat-Bold">Améliorations :</span> <br />Vous
-            pouvez dépenser votre score pour acheter des améliorations. Ces
-            améliorations augmentent votre production automatique, améliorent la
-            valeur de chaque clic, et apportent des avantages variés.
-          </p>
-          <p>
-            <span class="font-Montserrat-Bold">Easter eggs :</span><br />Le jeu
-            contient un/plusieurs secrets et easter eggs caché(s), alors
-            explorez et découvrez-le(s).
-          </p>
-          <p>
-            *Ce website utilise des cookies pour assurer une expérience
-            optimale.
-          </p>
-          <p
-            id="btn-start-modal"
-            class="font-Zcool text-xl border-2 border-dark-sec self-center px-6 py-3 rounded-lg hover:bg-dark-sec hover:cursor-pointer"
-          >
-            SAVE
-          </p>
+
+            <h2 class="font-Zcool text-3xl">Regles du jeu</h2>
+            <p>
+                <span class="font-Montserrat-Bold">L'objectif du jeu :</span>
+                <br/>Le but principal de Cody Clicker est d'augmenter le score
+                autant que possible. Vous commencez avec un score de 10 et vous
+                pouvez augmenter votre production de cookies en cliquant dessus ou
+                en achetant des améliorations.
+            </p>
+            <p>
+                <span class="font-Montserrat-Bold">Améliorations :</span> <br/>Vous
+                pouvez dépenser votre score pour acheter des améliorations. Ces
+                améliorations augmentent votre production automatique, améliorent la
+                valeur de chaque clic, et apportent des avantages variés.
+            </p>
+            <p>
+                <span class="font-Montserrat-Bold">Easter eggs :</span><br/>Le jeu
+                contient un/plusieurs secrets et easter eggs caché(s), alors
+                explorez et découvrez-le(s).
+            </p>
+            <p>
+                *Ce website utilise des cookies pour assurer une expérience
+                optimale.
+            </p>
+            <p
+                    id="btn-start-modal"
+                    class="font-Zcool text-xl border-2 border-dark-sec self-center px-6 py-3 rounded-lg hover:bg-dark-sec hover:cursor-pointer"
+            >
+                SAVE
+            </p>
         </div>
-      </section>
+    </section>
 
+<<<<<<< HEAD
       <!-- NOTIF -->
       <section
         id="notif"
         class="absolute right-1/2 bottom-8 translate-x-1/2 lg:bottom-8 lg:right-8 lg:translate-x-0 bg-green-notif w-[350px] h-[120px] lg:h-[100px] rounded-2xl flex items-center p-5 border-2 border-transparent hover:border-2 hover:border-light-prim"
       >
+=======
+    <section
+            id="notif"
+            class="absolute bottom-8 right-8 bg-green-notif w-[370px] h-[100px] rounded-2xl flex items-center p-5 border-2 border-transparent hover:border-2 hover:border-light-prim"
+    >
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
         <div>
-          <p id="notif-text" class="text-light-prim">
-            Tu as améliorer le niveau Pizza au niveau 3.
-          </p>
+            <p id="notif-text" class="text-light-prim">
+                Tu as améliorer le niveau Pizza au niveau 3.
+            </p>
         </div>
         <div class="w-20">
-          <img src="./assets/images/HandGesture3D/PNG/Thumbs_Up.png" alt="" />
+            <img src="./assets/images/HandGesture3D/PNG/Thumbs_Up.png" alt=""/>
         </div>
-      </section>
+    </section>
 
+<<<<<<< HEAD
       <!-- LEFT SECTION -->
       <section
         id="left-main"
@@ -115,16 +153,39 @@
                 <h2 class="font-Zcool text-4xl">Pizza</h2>
                 <p>
                   Cost:
+=======
+    <section id="left-main" class="w-fit flex flex-col gap-5 p-8">
+        <div
+                id="level-overflow"
+                class="flex flex-col gap-5 overflow-y-scroll overflow-x-hidden pr-6 pl-[2px] pt-[2px]"
+        >
+            <!-- LEVEL 1 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-pizza"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/Pizza.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Pizza</h2>
+                        <p>
+                            Cost:
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
 
-                  <span class="text-color-accent" id="cost-pizza">0</span>
-                </p>
-              </div>
+                            <span class="cost text-color-accent" id="cost-pizza">0</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-pizza">1</h2>
+                </div>
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-pizza">1</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- LEVEL 2 -->
           <div
             class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -143,12 +204,33 @@
                   <span class="text-color-accent" id="cost-burger">200</span>
                 </p>
               </div>
+=======
+            <!-- LEVEL 2 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-burger"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/Burger.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Burger</h2>
+                        <p>
+                            Cost:
+                            <span class="cost text-color-accent" id="cost-burger">200</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-burger">8</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-burger">8</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- LEVEL 3 -->
           <div
             class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -167,12 +249,33 @@
                   <span class="text-color-accent" id="cost-coffee">200</span>
                 </p>
               </div>
+=======
+            <!-- LEVEL 3 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-coffee"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/Coffee.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Coffee</h2>
+                        <p>
+                            Cost:
+                            <span class="cost text-color-accent" id="cost-coffee">200</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-coffee">8</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-coffee">8</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- LEVEL 4 -->
           <div
             class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -191,12 +294,33 @@
                   <span class="text-color-accent" id="cost-dorayaki">200</span>
                 </p>
               </div>
+=======
+            <!-- LEVEL 4 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-dorayaki"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/Dorayaki.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Dorayaki</h2>
+                        <p>
+                            Cost:
+                            <span class="cost text-color-accent" id="cost-dorayaki">200</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-dorayaki">8</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-dorayaki">8</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- LEVEL 5 -->
           <div
             class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -215,12 +339,33 @@
                   <span class="text-color-accent" id="cost-fries">200</span>
                 </p>
               </div>
+=======
+            <!-- LEVEL 5 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-fries"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/Fries1.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Fries</h2>
+                        <p>
+                            Cost:
+                            <span class="cost text-color-accent" id="cost-fries">200</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-fries">8</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-fries">8</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- LEVEL 6 -->
           <div
             class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -239,12 +384,33 @@
                   <span class="text-color-accent" id="cost-HotDog">200</span>
                 </p>
               </div>
+=======
+            <!-- LEVEL 6 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-HotDog"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/HotDog.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Hot Dog</h2>
+                        <p>
+                            Cost:
+                            <span class="cost text-color-accent" id="cost-HotDog">200</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-HotDog">8</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-HotDog">8</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- LEVEL 7 -->
           <div
             class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -262,12 +428,32 @@
                   Cost: <span class="text-color-accent" id="cost-ice">200</span>
                 </p>
               </div>
+=======
+            <!-- LEVEL 7 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-ice"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/IceCream.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Ice Cream</h2>
+                        <p>
+                            Cost: <span class="cost text-color-accent" id="cost-ice">200</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-ice">8</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-ice">8</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- LEVEL 8 -->
           <div
             class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -286,12 +472,33 @@
                   <span class="text-color-accent" id="cost-kebab">200</span>
                 </p>
               </div>
+=======
+            <!-- LEVEL 8 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-kebab"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/Kebab.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Kebab</h2>
+                        <p>
+                            Cost:
+                            <span class="cost text-color-accent" id="cost-kebab">200</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-kebab">8</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-kebab">8</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- LEVEL 9 -->
           <div
             class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -310,12 +517,33 @@
                   <span class="text-color-accent" id="cost-milk">200</span>
                 </p>
               </div>
+=======
+            <!-- LEVEL 9 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-milk"
+            >
+                <div id="left-card-9" class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/Milk.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Milk</h2>
+                        <p>
+                            Cost:
+                            <span class="cost text-color-accent" id="cost-milk">200</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-milk">8</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-milk">8</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- LEVEL 10 -->
           <div
             class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -334,12 +562,33 @@
                   <span class="text-color-accent" id="cost-muffin">200</span>
                 </p>
               </div>
+=======
+            <!-- LEVEL 10 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-muffin"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/Muffin.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Muffin</h2>
+                        <p>
+                            Cost:
+                            <span class="cost text-color-accent" id="cost-muffin">200</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-muffin">8</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-muffin">8</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- LEVEL 11 -->
           <div
             class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -358,12 +607,33 @@
                   <span class="text-color-accent" id="cost-sandwich">200</span>
                 </p>
               </div>
+=======
+            <!-- LEVEL 11 -->
+            <div
+                    class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+                    id="card-sandwich"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/Sandwich.png"
+                            alt=""
+                    />
+                    <div>
+                        <h2 class="font-Zcool text-4xl">Sandwich</h2>
+                        <p>
+                            Cost:
+                            <span class="cost text-color-accent" id="cost-sandwich">200</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="rank font-Zcool text-6xl" id="lvl-sandwich">8</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl" id="lvl-sandwich">8</h2>
-            </div>
-          </div>
 
+<<<<<<< HEAD
           <!-- INACTIVE -->
           <div
             class="bg-innactif-bg rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
@@ -378,13 +648,30 @@
                 <h2 class="font-Zcool text-4xl">? ? ? ?</h2>
                 <p>Cost: ? ? ?</p>
               </div>
+=======
+            <!-- INACTIVE -->
+            <div
+                    class="bg-innactif-bg rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            >
+                <div class="flex items-center gap-5">
+                    <img
+                            class="w-[74px]"
+                            src="./assets/images/FastFood3D/png/innactive/HotDog-off.png"
+                            alt=""
+                    />
+                    <div class="text-innactif-txt">
+                        <h2 class="font-Zcool text-4xl">? ? ? ?</h2>
+                        <p>Cost: ? ? ?</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="font-Zcool text-6xl text-innactif-txt">?</h2>
+                </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
             </div>
-            <div>
-              <h2 class="font-Zcool text-6xl text-innactif-txt">?</h2>
-            </div>
-          </div>
         </div>
 
+<<<<<<< HEAD
         <!-- STATS -->
         <div id="stats-notifs" class="hidden lg:flex items-center">
           <div
@@ -401,9 +688,27 @@
               <i id="reset" class="fa-regular fa-trash-can"></i>
             </div>
           </div>
+=======
+        <div id="stats-notifs" class="flex items-center">
+            <!-- STATS -->
+            <div
+                    id="card-stats"
+                    class="bg-dark-sec rounded-2xl flex text-light-prim w-[370px] min-h-[120px] px-5 justify-between items-center gap-2 font-Montserrat-Regular"
+            >
+                <div class="flex flex-col">
+                    <h3>Clic: <span id="clic">0</span></h3>
+                    <h3>Auto Clic: <span id="auto-clic">False</span></h3>
+                    <h3>Bonus: <span id="bonus">?</span></h3>
+                </div>
+                <div id="easter-egg">
+                    <div id="clic-easteregg" class="bg-[#033f4b] w-10 h-10"></div>
+                </div>
+            </div>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
         </div>
-      </section>
+    </section>
 
+<<<<<<< HEAD
       <!-- RIGHT SECTION -->
       <section
         id="right-main"
@@ -445,4 +750,28 @@
       </section>
     </main>
   </body>
+=======
+    <section
+            id="right-main"
+            class="w-full h-screen flex flex-col items-center justify-between pt-8"
+    >
+        <h1 id="score" class="font-Zcool text-light-prim text-8xl h-1/6">10</h1>
+        <div id="img-cody" class="h-5/6">
+            <img
+                    class="h-full w-auto"
+                    id="cody"
+                    src="./assets/images/Cody3D/png/Sleep-Cody_3D.png"
+                    alt=""
+            />
+        </div>
+    </section>
+</main>
+<!-- BTN COUNTER -->
+<div class="hidden">
+    <div class="card">
+        <button id="counter" type="button"></button>
+    </div>
+</div>
+</body>
+>>>>>>> 616ea5d (localStorage user + score + bonus + cost)
 </html>
