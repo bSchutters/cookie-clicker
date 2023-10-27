@@ -126,12 +126,9 @@ codyImage.addEventListener("click", () => {
   updateCostColors();
 });
 
-<<<<<<< HEAD
-=======
 const btnInfoRules = document.getElementById("info-rules");
 const btnInfoRulesMobile = document.getElementById("info-rules-mobile");
 
->>>>>>> ca479aa (conflicts fix)
 btnStartModal.onclick = function () {
   overlayStartModal.classList.add("hidden");
   startModal.classList.add("hidden");
