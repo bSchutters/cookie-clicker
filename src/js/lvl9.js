@@ -5,6 +5,13 @@ import {
   setClicValue,
   updateState,
   codyImage,
+  setAutoClickValue,
+  autoClickValue,
+  txtAT,
+  updateClicValueText,
+  updateCostTextColor,
+  updateCostColors,
+  itemsToWatch,
 } from "./store.js";
 import codyLvl9 from "../assets/images/Cody3D/png/Laugh-Cody_3D.png";
 
@@ -14,6 +21,10 @@ const lvlMilkElement = document.getElementById("lvl-milk");
 
 let lvlMilk = 1;
 let costMilk = 1000000;
+const MilkItem = itemsToWatch.find((item) => item.id === "cost-milk");
+if (MilkItem) {
+  MilkItem.cost = () => costMilk;
+}
 
 lvlMilkElement.textContent = lvlMilk;
 costMilkElement.textContent = costMilk;
@@ -28,7 +39,12 @@ cardMilkElement.onclick = function () {
 
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 2000;
+    if (lvlMilk === 2) {
+      setAutoClickValue(autoClickValue + 10000);
+    }
     setClicValue(newClicValue);
+    updateClicValueText();
+    updateCostColors();
 
     switch (lvlMilk) {
       case 1:
@@ -36,10 +52,9 @@ cardMilkElement.onclick = function () {
         costMilkElement.textContent = costMilk;
         break;
       case 2:
-        autoClicValue = autoClicValue + 10000;
         costMilk = 2000000;
         costMilkElement.textContent = costKMilk;
-        ATRate.innerText = "True - 13613 CPS";
+        txtAT("True - 13613 CPS");
         break;
       case 3:
         costMilk = 4000000;

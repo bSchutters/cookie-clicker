@@ -1,6 +1,18 @@
 // store.js
-//var global
+
+// Var global pour élément HTML
 export const scoreElement = document.getElementById("score");
+
+const ATRate = document.getElementById("auto-clic"); // Élément pour afficher l'état de l'autoclicker
+
+// État de l'autoclicker et valeur de l'autoclick
+export let autoClickerActive = false;
+export let autoClickValue = 1;
+
+export function setAutoClickValue(newValue) {
+  autoClickValue = newValue;
+}
+
 export const codyImage = document.getElementById("cody");
 export const userName = document.getElementById("start-modal-input-username");
 export const startModal = document.getElementById("start-modal");
@@ -23,6 +35,7 @@ const observers = [];
 export function updateState(newState) {
   Object.assign(state, newState);
   notifyObservers();
+  updateCostColors();
 }
 
 // Fonction pour inscrire un observateur
@@ -50,13 +63,86 @@ export function setClicValue(newValue) {
   updateState({ clicValue: newValue });
 }
 
+// Fonction pour activer l'autoclicker
+export function activateAutoClicker() {
+  autoClickerActive = true;
+}
+
+// Fonction pour désactiver l'autoclicker
+export function deactivateAutoClicker() {
+  autoClickerActive = false;
+  ATRate.innerText = "False";
+}
+export function txtAT(text) {
+  ATRate.innerText = text;
+}
+export function getCostById(id) {
+  const item = itemsToWatch.find((item) => item.id === id);
+  if (item && item.cost) {
+    return item.cost();
+  }
+  return null;
+}
+export const itemsToWatch = [
+  { id: "cost-pizza", cost: null },
+  { id: "cost-burger", cost: null },
+  { id: "cost-coffee", cost: null },
+  { id: "cost-dorayaki", cost: null },
+  { id: "cost-fries", cost: null },
+  { id: "cost-HotDog", cost: null },
+  { id: "cost-ice", cost: null },
+  { id: "cost-kebab", cost: null },
+  { id: "cost-milk", cost: null },
+  { id: "cost-muffin", cost: null },
+  { id: "cost-sandwich", cost: null },
+];
+export function updateCostColors() {
+  for (const item of itemsToWatch) {
+    if (item.cost) {
+      updateCostTextColor(item.id, item.cost());
+    }
+  }
+}
+
 /*export function autoClicker() {
   if (autoClicBoolean === true) {
     function autoClickerIncr() {
       state.score += autoClicValue;
       scoreElement.textContent = state.score;
+
     }
-    setInterval(autoClickerIncr, 1000);
   }
 }*/
 
+export function updateCostTextColor(itemID, cost) {
+  const costElement = document.getElementById(itemID);
+  const currentScore = getScore();
+
+  if (costElement) {
+    if (currentScore >= cost) {
+      costElement.classList.remove("text-color-accent");
+      costElement.classList.add("text-cost-green");
+    } else {
+      costElement.classList.add("text-color-accent");
+      costElement.classList.remove("text-cost-green");
+    }
+  } else {
+    console.warn("L'élément avec l'ID", itemID, "n'a pas été trouvé.");
+  }
+}
+
+export function autoClicker() {
+  if (autoClickerActive) {
+    const currentScore = getScore();
+    const newScore = currentScore + autoClickValue;
+    updateState({ score: newScore });
+  }
+}
+const clicValueElement = document.getElementById("clic");
+
+function updateClicValueText() {
+  const currentClicValue = getClicValue();
+  clicValueElement.textContent = ` ${currentClicValue}`;
+}
+
+export { updateClicValueText };

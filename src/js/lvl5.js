@@ -5,6 +5,13 @@ import {
   setClicValue,
   updateState,
   codyImage,
+  setAutoClickValue,
+  autoClickValue,
+  txtAT,
+  updateClicValueText,
+  updateCostTextColor,
+  updateCostColors,
+  itemsToWatch,
 } from "./store.js";
 import codyLvl5 from "../assets/images/Cody3D/png/Surprised-Cody_3D.png";
 
@@ -14,6 +21,11 @@ const lvlFriesElement = document.getElementById("lvl-fries");
 
 let lvlFries = 1;
 let costFries = 5000;
+
+const FriesItem = itemsToWatch.find((item) => item.id === "cost-fries");
+if (FriesItem) {
+  FriesItem.cost = () => costFries;
+}
 
 lvlFriesElement.textContent = lvlFries;
 costFriesElement.textContent = costFries;
@@ -28,7 +40,12 @@ cardFriesElement.onclick = function () {
 
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 150;
+    if (lvlFries === 2) {
+      setAutoClickValue(autoClickValue + 10);
+    }
     setClicValue(newClicValue);
+    updateClicValueText();
+    updateCostColors();
 
     switch (lvlFries) {
       case 1:
@@ -36,10 +53,9 @@ cardFriesElement.onclick = function () {
         costFriesElement.textContent = costFries;
         break;
       case 2:
-        autoClicValue = autoClicValue + 10;
         costFries = 10000;
         costFriesElement.textContent = costFries;
-        ATRate.innerText = "True - 13 CPS";
+        txtAT("True - 13 CPS");
         break;
       case 3:
         costFries = 20000;
