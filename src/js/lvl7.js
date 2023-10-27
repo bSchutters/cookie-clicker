@@ -10,6 +10,8 @@ import {
   txtAT,
   updateClicValueText,
   updateCostTextColor,
+  updateCostColors,
+  itemsToWatch,
 } from "./store.js";
 import codyLvl7 from "../assets/images/Cody3D/png/Happy-Cody_3D.png";
 
@@ -19,6 +21,10 @@ const lvlIceCreamElement = document.getElementById("lvl-ice");
 
 let lvlIceCream = 1;
 let costIceCream = 20000;
+const IcecreamItem = itemsToWatch.find((item) => item.id === "cost-ice");
+if (IcecreamItem) {
+  IcecreamItem.cost = () => costIceCream;
+}
 
 lvlIceCreamElement.textContent = lvlIceCream;
 costIceCreamElement.textContent = costIceCream;
@@ -38,10 +44,7 @@ cardIceCreamElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    setInterval(() => {
-      updateCostTextColor("cost-ice");
-    }, 1000);
-
+    updateCostColors();
     switch (lvlIceCream) {
       case 1:
         costIceCream = 50000;

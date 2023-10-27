@@ -10,6 +10,8 @@ import {
   txtAT,
   updateClicValueText,
   updateCostTextColor,
+  updateCostColors,
+  itemsToWatch,
 } from "./store.js";
 import codyLvl9 from "../assets/images/Cody3D/png/Laugh-Cody_3D.png";
 
@@ -19,6 +21,10 @@ const lvlMilkElement = document.getElementById("lvl-milk");
 
 let lvlMilk = 1;
 let costMilk = 1000000;
+const MilkItem = itemsToWatch.find((item) => item.id === "cost-milk");
+if (MilkItem) {
+  MilkItem.cost = () => costMilk;
+}
 
 lvlMilkElement.textContent = lvlMilk;
 costMilkElement.textContent = costMilk;
@@ -38,9 +44,7 @@ cardMilkElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    setInterval(() => {
-      updateCostTextColor("cost-milk");
-    }, 1000);
+    updateCostColors();
 
     switch (lvlMilk) {
       case 1:

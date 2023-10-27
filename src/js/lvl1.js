@@ -7,6 +7,8 @@ import {
   codyImage,
   updateClicValueText,
   updateCostTextColor,
+  itemsToWatch,
+  updateCostColors,
 } from "./store.js";
 import codyLvl1 from "../assets/images/Cody3D/png/Dreaming-Cody_3D.png";
 
@@ -16,6 +18,11 @@ const lvlPizzaElement = document.getElementById("lvl-pizza");
 
 let lvlPizza = 1;
 let costPizza = 10;
+
+const pizzaItem = itemsToWatch.find((item) => item.id === "cost-pizza");
+if (pizzaItem) {
+  pizzaItem.cost = () => costPizza;
+}
 
 lvlPizzaElement.textContent = lvlPizza;
 costPizzaElement.textContent = costPizza;
@@ -31,10 +38,7 @@ cardPizzaElement.onclick = function () {
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 1;
     setClicValue(newClicValue);
-    updateClicValueText();
-    setInterval(() => {
-      updateCostTextColor("cost-pizza");
-    }, 1000);
+    updateCostColors();
 
     switch (lvlPizza) {
       case 1:
@@ -62,6 +66,10 @@ cardPizzaElement.onclick = function () {
         costPizzaElement.textContent = "-";
         codyImage.src = codyLvl1;
         break;
+    }
+    if (lvlPizza <= 5) {
+      costPizzaElement.textContent = costPizza;
+      updateCostColors("cost-pizza");
     }
   }
 };

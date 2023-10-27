@@ -12,6 +12,8 @@ import {
   txtAT,
   updateClicValueText,
   updateCostTextColor,
+  itemsToWatch,
+  updateCostColors,
 } from "./store.js";
 import codyLvl3 from "../assets/images/Cody3D/png/Angry-Cody_3D.png";
 
@@ -22,6 +24,10 @@ const lvlCoffeeElement = document.getElementById("lvl-coffee");
 let lvlCoffee = 1;
 let costCoffee = 500;
 let autoClicValue = 5;
+const coffeeItem = itemsToWatch.find((item) => item.id === "cost-coffee");
+if (coffeeItem) {
+  coffeeItem.cost = () => costCoffee;
+}
 
 lvlCoffeeElement.textContent = lvlCoffee;
 costCoffeeElement.textContent = costCoffee;
@@ -38,9 +44,7 @@ cardCoffeeElement.onclick = function () {
     const newClicValue = currentClicValue + autoClicValue;
     setClicValue(newClicValue);
     updateClicValueText();
-    setInterval(() => {
-      updateCostTextColor("cost-coffee");
-    }, 1000);
+    updateCostColors();
 
     switch (lvlCoffee) {
       case 1:

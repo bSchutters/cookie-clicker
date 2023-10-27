@@ -10,6 +10,8 @@ import {
   txtAT,
   updateClicValueText,
   updateCostTextColor,
+  updateCostColors,
+  itemsToWatch,
 } from "./store.js";
 import codyLvl6 from "../assets/images/Cody3D/png/Poker-Cody_3D.png";
 
@@ -19,6 +21,10 @@ const lvlHotDogElement = document.getElementById("lvl-HotDog");
 
 let lvlHotDog = 1;
 let costHotDog = 10000;
+const HotDogItem = itemsToWatch.find((item) => item.id === "cost-HotDog");
+if (HotDogItem) {
+  HotDogItem.cost = () => costHotDog;
+}
 
 lvlHotDogElement.textContent = lvlHotDog;
 costHotDogElement.textContent = costHotDog;
@@ -38,9 +44,7 @@ cardHotDogElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    setInterval(() => {
-      updateCostTextColor("cost-HotDog");
-    }, 1000);
+    updateCostColors();
 
     switch (lvlHotDog) {
       case 1:

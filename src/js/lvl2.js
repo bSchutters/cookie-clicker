@@ -7,6 +7,8 @@ import {
   codyImage,
   updateClicValueText,
   updateCostTextColor,
+  itemsToWatch,
+  updateCostColors,
 } from "./store.js";
 import codyLvl2 from "../assets/images/Cody3D/png/Furious-Cody_3D.png";
 
@@ -16,6 +18,10 @@ const lvlBurgerElement = document.getElementById("lvl-burger");
 
 let lvlBurger = 1;
 let costBurger = 100;
+const burgerItem = itemsToWatch.find((item) => item.id === "cost-burger");
+if (burgerItem) {
+  burgerItem.cost = () => costBurger;
+}
 
 lvlBurgerElement.textContent = lvlBurger;
 costBurgerElement.textContent = costBurger;
@@ -32,9 +38,7 @@ cardBurgerElement.onclick = function () {
     const newClicValue = currentClicValue + 2;
     setClicValue(newClicValue);
     updateClicValueText();
-    setInterval(() => {
-      updateCostTextColor("cost-burger");
-    }, 1000);
+    updateCostColors();
 
     switch (lvlBurger) {
       case 1:
@@ -62,6 +66,10 @@ cardBurgerElement.onclick = function () {
         costBurgerElement.textContent = "-";
         codyImage.src = codyLvl2;
         break;
+    }
+    if (lvlPizza <= 5) {
+      costPizzaElement.textContent = costBurger;
+      updateCostColors("cost-burger");
     }
   }
 };

@@ -24,6 +24,7 @@ const observers = [];
 export function updateState(newState) {
   Object.assign(state, newState);
   notifyObservers();
+  updateCostColors();
 }
 
 // Fonction pour inscrire un observateur
@@ -64,16 +65,48 @@ export function deactivateAutoClicker() {
 export function txtAT(text) {
   ATRate.innerText = text;
 }
+export function getCostById(id) {
+  const item = itemsToWatch.find((item) => item.id === id);
+  if (item && item.cost) {
+    return item.cost();
+  }
+  return null;
+}
+export const itemsToWatch = [
+  { id: "cost-pizza", cost: null },
+  { id: "cost-burger", cost: null },
+  { id: "cost-coffee", cost: null },
+  { id: "cost-dorayaki", cost: null },
+  { id: "cost-fries", cost: null },
+  { id: "cost-HotDog", cost: null },
+  { id: "cost-ice", cost: null },
+  { id: "cost-kebab", cost: null },
+  { id: "cost-milk", cost: null },
+  { id: "cost-muffin", cost: null },
+  { id: "cost-sandwich", cost: null },
+];
+export function updateCostColors() {
+  for (const item of itemsToWatch) {
+    if (item.cost) {
+      updateCostTextColor(item.id, item.cost());
+    }
+  }
+}
 
-export function updateCostTextColor(itemID) {
+export function updateCostTextColor(itemID, cost) {
   const costElement = document.getElementById(itemID);
+  const currentScore = getScore();
 
-  if (getScore() >= parseInt(costElement.textContent)) {
-    costElement.classList.remove("text-color-accent");
-    costElement.classList.add("text-cost-green");
+  if (costElement) {
+    if (currentScore >= cost) {
+      costElement.classList.remove("text-color-accent");
+      costElement.classList.add("text-cost-green");
+    } else {
+      costElement.classList.add("text-color-accent");
+      costElement.classList.remove("text-cost-green");
+    }
   } else {
-    costElement.classList.remove("text-cost-green");
-    costElement.classList.add("text-color-accent");
+    console.warn("L'élément avec l'ID", itemID, "n'a pas été trouvé.");
   }
 }
 

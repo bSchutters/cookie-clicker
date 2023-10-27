@@ -10,6 +10,8 @@ import {
   txtAT,
   updateClicValueText,
   updateCostTextColor,
+  updateCostColors,
+  itemsToWatch,
 } from "./store.js";
 import codyLvl5 from "../assets/images/Cody3D/png/Surprised-Cody_3D.png";
 
@@ -19,6 +21,11 @@ const lvlFriesElement = document.getElementById("lvl-fries");
 
 let lvlFries = 1;
 let costFries = 5000;
+
+const FriesItem = itemsToWatch.find((item) => item.id === "cost-fries");
+if (FriesItem) {
+  FriesItem.cost = () => costFries;
+}
 
 lvlFriesElement.textContent = lvlFries;
 costFriesElement.textContent = costFries;
@@ -38,9 +45,7 @@ cardFriesElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    setInterval(() => {
-      updateCostTextColor("cost-fries");
-    }, 1000);
+    updateCostColors();
 
     switch (lvlFries) {
       case 1:

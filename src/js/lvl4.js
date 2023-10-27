@@ -14,6 +14,8 @@ import {
   txtAT,
   updateClicValueText,
   updateCostTextColor,
+  updateCostColors,
+  itemsToWatch,
 } from "./store.js";
 import codyLvl4 from "../assets/images/Cody3D/png/Devil-Cody_3D.png";
 
@@ -23,6 +25,10 @@ const lvlDorayakiElement = document.getElementById("lvl-dorayaki");
 
 let lvlDorayaki = 1;
 let costDorayaki = 1500;
+const dorayakiItem = itemsToWatch.find((item) => item.id === "cost-dorayaki");
+if (dorayakiItem) {
+  dorayakiItem.cost = () => costDorayaki;
+}
 
 lvlDorayakiElement.textContent = lvlDorayaki;
 costDorayakiElement.textContent = costDorayaki;
@@ -43,9 +49,7 @@ cardDorayakiElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    setInterval(() => {
-      updateCostTextColor("cost-dorayaki");
-    }, 1000);
+    updateCostColors();
 
     switch (lvlDorayaki) {
       case 1:

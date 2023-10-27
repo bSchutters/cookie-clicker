@@ -10,6 +10,8 @@ import {
   txtAT,
   updateClicValueText,
   updateCostTextColor,
+  updateCostColors,
+  itemsToWatch,
 } from "./store.js";
 import codyLvl11 from "../assets/images/Cody3D/png/Heart-Cody_3D.png";
 
@@ -19,6 +21,10 @@ const lvlSandwichElement = document.getElementById("lvl-sandwich");
 
 let lvlSandwich = 1;
 let costSandwich = 100000000;
+const SandwichItem = itemsToWatch.find((item) => item.id === "cost-sandwich");
+if (SandwichItem) {
+  SandwichItem.cost = () => costSandwich;
+}
 
 lvlSandwichElement.textContent = lvlSandwich;
 costSandwichElement.textContent = costSandwich;
@@ -38,9 +44,7 @@ cardSandwichElement.onclick = function () {
     }
     setClicValue(newClicValue);
     updateClicValueText();
-    setInterval(() => {
-      updateCostTextColor("cost-sandwich");
-    }, 1000);
+    updateCostColors();
 
     switch (lvlSandwich) {
       case 1:

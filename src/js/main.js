@@ -2,7 +2,6 @@ import "../css/style.css";
 import "./store.js"; // Importez le store
 import { scoreElement, codyImage } from "./store.js";
 
-import("./store.js"); // Importez le store
 import "./lvl1.js"; // Importez le niveau 1
 import "./lvl2.js"; // Importez le niveau 2
 import "./lvl3.js"; // Importez le niveau 3
@@ -25,6 +24,8 @@ import {
   subscribe,
   updateState,
   updateCostTextColor,
+  getCostById,
+  updateCostColors,
 } from "./store.js";
 
 let clicRate = document.getElementById("clic");
@@ -39,7 +40,7 @@ function scoreComponent(state) {
 subscribe(scoreComponent);
 
 // Modifiez l'état
-updateState({ score: 1000000000 });
+updateState({ score: 10000000000000 });
 
 // Modifiez la valeur de clic
 setClicValue(0);
@@ -48,6 +49,7 @@ codyImage.addEventListener("click", () => {
   const currentScore = getScore();
   const currentClicValue = getClicValue();
   updateState({ score: currentScore + currentClicValue });
+  updateCostColors();
 });
 
 const startModal = document.getElementById("start-modal");
