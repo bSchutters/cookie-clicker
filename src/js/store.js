@@ -15,7 +15,6 @@ export function setAutoClickValue(newValue) {
 
 export const codyImage = document.getElementById("cody");
 
-
 // Définition du store
 const state = {
   score: 0,
@@ -57,7 +56,6 @@ export function setClicValue(newValue) {
   updateState({ clicValue: newValue });
 }
 
-
 // Fonction pour activer l'autoclicker
 export function activateAutoClicker() {
   autoClickerActive = true;
@@ -95,6 +93,9 @@ export function updateCostColors() {
   for (const item of itemsToWatch) {
     if (item.cost) {
       updateCostTextColor(item.id, item.cost());
+    }
+  }
+}
 
 /*export function autoClicker() {
   if (autoClicBoolean === true) {
@@ -105,7 +106,6 @@ export function updateCostColors() {
     }
   }
 }*/
-
 
 export function updateCostTextColor(itemID, cost) {
   const costElement = document.getElementById(itemID);
@@ -139,6 +139,3 @@ function updateClicValueText() {
 }
 
 export { updateClicValueText };
-
-export const codyImage = document.getElementById("cody");
-
