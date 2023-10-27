@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <link
       rel="stylesheet"
@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <title>Cody Clicker</title>
-    <script type="module" crossorigin src="/cookie-clicker/assets/main-7b5c9949.js"></script>
+    <script type="module" crossorigin src="/cookie-clicker/assets/main-d0791bd1.js"></script>
     <link rel="stylesheet" href="/cookie-clicker/assets/index-7dff3657.css">
   </head>
   <body class="bg-dark-prim font-Montserrat-Medium overflow-hidden">
@@ -21,7 +21,7 @@
       <!-- START MODAL -->
       <div
         id="overlay"
-        class="hidden bg-black absolute w-full h-full top-0 left-0 opacity-70"
+        class="bg-black absolute w-full h-full top-0 left-0 opacity-70"
       ></div>
       <section
         id="start-modal"
@@ -40,40 +40,37 @@
             placeholder="Your Username"
           />
 
-
-
-            <h2 class="font-Zcool text-3xl">Regles du jeu</h2>
-            <p>
-                <span class="font-Montserrat-Bold">L'objectif du jeu :</span>
-                <br/>Le but principal de Cody Clicker est d'augmenter le score
-                autant que possible. Vous commencez avec un score de 10 et vous
-                pouvez augmenter votre production de cookies en cliquant dessus ou
-                en achetant des améliorations.
-            </p>
-            <p>
-                <span class="font-Montserrat-Bold">Améliorations :</span> <br/>Vous
-                pouvez dépenser votre score pour acheter des améliorations. Ces
-                améliorations augmentent votre production automatique, améliorent la
-                valeur de chaque clic, et apportent des avantages variés.
-            </p>
-            <p>
-                <span class="font-Montserrat-Bold">Easter eggs :</span><br/>Le jeu
-                contient un/plusieurs secrets et easter eggs caché(s), alors
-                explorez et découvrez-le(s).
-            </p>
-            <p>
-                *Ce website utilise des cookies pour assurer une expérience
-                optimale.
-            </p>
-            <p
-                    id="btn-start-modal"
-                    class="font-Zcool text-xl border-2 border-dark-sec self-center px-6 py-3 rounded-lg hover:bg-dark-sec hover:cursor-pointer"
-            >
-                SAVE
-            </p>
+          <h2 class="font-Zcool text-3xl">Regles du jeu</h2>
+          <p>
+            <span class="font-Montserrat-Bold">L'objectif du jeu :</span>
+            <br />Le but principal de Cody Clicker est d'augmenter le score
+            autant que possible. Vous commencez avec un score de 10 et vous
+            pouvez augmenter votre production de cookies en cliquant dessus ou
+            en achetant des améliorations.
+          </p>
+          <p>
+            <span class="font-Montserrat-Bold">Améliorations :</span> <br />Vous
+            pouvez dépenser votre score pour acheter des améliorations. Ces
+            améliorations augmentent votre production automatique, améliorent la
+            valeur de chaque clic, et apportent des avantages variés.
+          </p>
+          <p>
+            <span class="font-Montserrat-Bold">Easter eggs :</span><br />Le jeu
+            contient un/plusieurs secrets et easter eggs caché(s), alors
+            explorez et découvrez-le(s).
+          </p>
+          <p>
+            *Ce website utilise des cookies pour assurer une expérience
+            optimale.
+          </p>
+          <p
+            id="btn-start-modal"
+            class="font-Zcool text-xl border-2 border-dark-sec self-center px-6 py-3 rounded-lg hover:bg-dark-sec hover:cursor-pointer"
+          >
+            SAVE
+          </p>
         </div>
-    </section>
-
+      </section>
 
       <!-- NOTIF -->
       <section
@@ -81,14 +78,14 @@
         class="absolute right-1/2 bottom-8 translate-x-1/2 lg:bottom-8 lg:right-8 lg:translate-x-0 bg-green-notif w-[350px] h-[120px] lg:h-[100px] rounded-2xl flex items-center p-5 border-2 border-transparent hover:border-2 hover:border-light-prim"
       >
         <div>
-            <p id="notif-text" class="text-light-prim">
-                Tu as améliorer le niveau Pizza au niveau 3.
-            </p>
+          <p id="notif-text" class="text-light-prim">
+            Tu as améliorer le niveau Pizza au niveau 3.
+          </p>
         </div>
         <div class="w-20">
-            <img src="/cookie-clicker/assets/Thumbs_Up-4517ee6a.png" alt=""/>
+          <img src="/cookie-clicker/assets/Thumbs_Up-4517ee6a.png" alt="" />
         </div>
-    </section>
+      </section>
 
       <!-- LEFT SECTION -->
       <section
@@ -121,15 +118,14 @@
                 <p>
                   Cost:
 
-                            <span class="cost text-color-accent" id="cost-pizza">0</span>
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <h2 class="rank font-Zcool text-6xl" id="lvl-pizza">1</h2>
-                </div>
+                  <span class="cost text-color-accent" id="cost-pizza">0</span>
+                </p>
+              </div>
             </div>
-
+            <div>
+              <h2 class="rank font-Zcool text-6xl" id="lvl-pizza">1</h2>
+            </div>
+          </div>
 
           <!-- LEVEL 2 -->
           <div
@@ -146,11 +142,16 @@
                 <h2 class="font-Zcool text-4xl">Burger</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-burger">200</span>
+                  <span class="cost text-color-accent" id="cost-burger"
+                    >200</span
+                  >
                 </p>
               </div>
             </div>
-
+            <div>
+              <h2 class="rank font-Zcool text-6xl" id="lvl-burger">1</h2>
+            </div>
+          </div>
 
           <!-- LEVEL 3 -->
           <div
@@ -167,15 +168,16 @@
                 <h2 class="font-Zcool text-4xl">Coffee</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-coffee">200</span>
+                  <span class="cost text-color-accent" id="cost-coffee"
+                    >200</span
+                  >
                 </p>
               </div>
             </div>
             <div>
               <h2 class="font-Zcool text-6xl" id="lvl-coffee">8</h2>
-
             </div>
-
+          </div>
 
           <!-- LEVEL 4 -->
           <div
@@ -192,12 +194,16 @@
                 <h2 class="font-Zcool text-4xl">Dorayaki</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-dorayaki">200</span>
+                  <span class="cost text-color-accent" id="cost-dorayaki"
+                    >200</span
+                  >
                 </p>
               </div>
-
             </div>
-
+            <div>
+              <h2 class="rank font-Zcool text-6xl" id="lvl-dorayaki">1</h2>
+            </div>
+          </div>
 
           <!-- LEVEL 5 -->
           <div
@@ -214,15 +220,16 @@
                 <h2 class="font-Zcool text-4xl">Fries</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-fries">200</span>
+                  <span class="cost text-color-accent" id="cost-fries"
+                    >200</span
+                  >
                 </p>
               </div>
             </div>
             <div>
               <h2 class="font-Zcool text-6xl" id="lvl-fries">8</h2>
-
             </div>
-
+          </div>
 
           <!-- LEVEL 6 -->
           <div
@@ -239,15 +246,16 @@
                 <h2 class="font-Zcool text-4xl">Hot Dog</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-HotDog">200</span>
+                  <span class="cost text-color-accent" id="cost-HotDog"
+                    >200</span
+                  >
                 </p>
               </div>
             </div>
             <div>
               <h2 class="font-Zcool text-6xl" id="lvl-HotDog">8</h2>
-
             </div>
-
+          </div>
 
           <!-- LEVEL 7 -->
           <div
@@ -263,11 +271,15 @@
               <div>
                 <h2 class="font-Zcool text-4xl">Ice Cream</h2>
                 <p>
-                  Cost: <span class="text-color-accent" id="cost-ice">200</span>
+                  Cost:
+                  <span class="cost text-color-accent" id="cost-ice">200</span>
                 </p>
               </div>
-
             </div>
+            <div>
+              <h2 class="rank font-Zcool text-6xl" id="lvl-ice">1</h2>
+            </div>
+          </div>
 
           <!-- LEVEL 8 -->
           <div
@@ -284,14 +296,16 @@
                 <h2 class="font-Zcool text-4xl">Kebab</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-kebab">200</span>
+                  <span class="cost text-color-accent" id="cost-kebab"
+                    >200</span
+                  >
                 </p>
               </div>
             </div>
             <div>
               <h2 class="font-Zcool text-6xl" id="lvl-kebab">8</h2>
             </div>
-
+          </div>
 
           <!-- LEVEL 9 -->
           <div
@@ -308,12 +322,14 @@
                 <h2 class="font-Zcool text-4xl">Milk</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-milk">200</span>
+                  <span class="cost text-color-accent" id="cost-milk">200</span>
                 </p>
               </div>
-
             </div>
-
+            <div>
+              <h2 class="rank font-Zcool text-6xl" id="lvl-milk">1</h2>
+            </div>
+          </div>
 
           <!-- LEVEL 10 -->
           <div
@@ -330,15 +346,16 @@
                 <h2 class="font-Zcool text-4xl">Muffin</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-muffin">200</span>
+                  <span class="cost text-color-accent" id="cost-muffin"
+                    >200</span
+                  >
                 </p>
               </div>
             </div>
             <div>
               <h2 class="font-Zcool text-6xl" id="lvl-muffin">8</h2>
-
             </div>
-
+          </div>
 
           <!-- LEVEL 11 -->
           <div
@@ -355,10 +372,16 @@
                 <h2 class="font-Zcool text-4xl">Sandwich</h2>
                 <p>
                   Cost:
-                  <span class="text-color-accent" id="cost-sandwich">200</span>
+                  <span class="cost text-color-accent" id="cost-sandwich"
+                    >200</span
+                  >
                 </p>
               </div>
             </div>
+            <div>
+              <h2 class="rank font-Zcool text-6xl" id="lvl-sandwich">1</h2>
+            </div>
+          </div>
 
           <!-- INACTIVE -->
           <div
@@ -377,11 +400,9 @@
             </div>
             <div>
               <h2 class="font-Zcool text-6xl text-innactif-txt">?</h2>
-
             </div>
+          </div>
         </div>
-
-
         <!-- STATS -->
         <div id="stats-notifs" class="hidden lg:flex items-center">
           <div
@@ -396,11 +417,10 @@
             <div id="icons" class="flex flex-col justify-between h-full">
               <i id="info-rules" class="fa-solid fa-circle-info"></i>
               <i id="reset" class="fa-regular fa-trash-can"></i>
-
             </div>
+          </div>
         </div>
-    </section>
-
+      </section>
 
       <!-- RIGHT SECTION -->
       <section
@@ -443,5 +463,4 @@
       </section>
     </main>
   </body>
-
 </html>
