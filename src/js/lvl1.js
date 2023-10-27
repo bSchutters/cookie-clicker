@@ -39,6 +39,7 @@ cardPizzaElement.onclick = function () {
     const currentClicValue = getClicValue();
     const newClicValue = currentClicValue + 1;
     setClicValue(newClicValue);
+    updateClicValueText();
     updateCostColors();
 
     switch (lvlPizza) {
