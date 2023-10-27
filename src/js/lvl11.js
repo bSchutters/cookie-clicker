@@ -8,11 +8,13 @@ import {
   setAutoClickValue,
   autoClickValue,
   txtAT,
+  txtATmobile,
   updateClicValueText,
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
   showNotification,
+  updateClicValueTextMobile,
 } from "./store.js";
 import codyLvl11 from "../assets/images/Cody3D/png/Heart-Cody_3D.png";
 
@@ -46,6 +48,7 @@ cardSandwichElement.onclick = function () {
     setClicValue(newClicValue);
     updateClicValueText();
     updateCostColors();
+    updateClicValueTextMobile();
 
     switch (lvlSandwich) {
       case 1:
@@ -56,6 +59,7 @@ cardSandwichElement.onclick = function () {
         costSandwich = 1000000000;
         costSandwichElement.textContent = costSandwich;
         txtAT("True - 363613 CPS");
+        txtATmobile("True - 363613 CPS");
         showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:

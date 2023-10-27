@@ -10,6 +10,7 @@ import {
   itemsToWatch,
   updateCostColors,
   showNotification,
+  updateClicValueTextMobile,
 } from "./store.js";
 import codyLvl2 from "../assets/images/Cody3D/png/Furious-Cody_3D.png";
 
@@ -40,6 +41,7 @@ cardBurgerElement.onclick = function () {
     setClicValue(newClicValue);
     updateClicValueText();
     updateCostColors();
+    updateClicValueTextMobile();
 
     switch (lvlBurger) {
       case 1:

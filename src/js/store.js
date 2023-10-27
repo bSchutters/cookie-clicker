@@ -4,6 +4,7 @@
 export const scoreElement = document.getElementById("score");
 
 const ATRate = document.getElementById("auto-clic"); // Élément pour afficher l'état de l'autoclicker
+const ATRatemobile = document.getElementById("auto-clic-mobile"); // Élément pour afficher l'état de l'autoclicker-mobile
 
 // État de l'autoclicker et valeur de l'autoclick
 export let autoClickerActive = false;
@@ -69,6 +70,9 @@ export function deactivateAutoClicker() {
 export function txtAT(text) {
   ATRate.innerText = text;
 }
+export function txtATmobile(text) {
+  ATRatemobile.innerText = text;
+}
 export function getCostById(id) {
   const item = itemsToWatch.find((item) => item.id === id);
   if (item && item.cost) {
@@ -126,6 +130,15 @@ const clicValueElement = document.getElementById("clic");
 function updateClicValueText() {
   const currentClicValue = getClicValue();
   clicValueElement.textContent = ` ${currentClicValue}`;
+}
+
+// clic mobile
+
+const clicValueElementMobile = document.getElementById("clic-mobile");
+
+export function updateClicValueTextMobile() {
+  const currentClicValue = getClicValue();
+  clicValueElementMobile.textContent = `${currentClicValue}`;
 }
 
 export { updateClicValueText };

@@ -10,6 +10,7 @@ import {
   itemsToWatch,
   updateCostColors,
   showNotification,
+  updateClicValueTextMobile,
 } from "./store.js";
 import codyLvl1 from "../assets/images/Cody3D/png/Dreaming-Cody_3D.png";
 
@@ -41,6 +42,7 @@ cardPizzaElement.onclick = function () {
     setClicValue(newClicValue);
     updateClicValueText();
     updateCostColors();
+    updateClicValueTextMobile();
 
     switch (lvlPizza) {
       case 1:

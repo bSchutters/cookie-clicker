@@ -8,11 +8,13 @@ import {
   setAutoClickValue,
   autoClickValue,
   txtAT,
+  txtATmobile,
   updateClicValueText,
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
   showNotification,
+  updateClicValueTextMobile,
 } from "./store.js";
 import codyLvl6 from "../assets/images/Cody3D/png/Poker-Cody_3D.png";
 
@@ -46,6 +48,7 @@ cardHotDogElement.onclick = function () {
     setClicValue(newClicValue);
     updateClicValueText();
     updateCostColors();
+    updateClicValueTextMobile();
 
     switch (lvlHotDog) {
       case 1:
@@ -56,6 +59,7 @@ cardHotDogElement.onclick = function () {
         costHotDog = 30000;
         costHotDogElement.textContent = costHotDog;
         txtAT("True - 113 CPS");
+        txtATmobile("True - 113 CPS");
         showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:

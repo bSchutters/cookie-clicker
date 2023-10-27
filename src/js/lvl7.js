@@ -8,11 +8,13 @@ import {
   setAutoClickValue,
   autoClickValue,
   txtAT,
+  txtATmobile,
   updateClicValueText,
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
   showNotification,
+  updateClicValueTextMobile,
 } from "./store.js";
 import codyLvl7 from "../assets/images/Cody3D/png/Happy-Cody_3D.png";
 
@@ -46,6 +48,8 @@ cardIceCreamElement.onclick = function () {
     setClicValue(newClicValue);
     updateClicValueText();
     updateCostColors();
+    updateClicValueTextMobile();
+
     switch (lvlIceCream) {
       case 1:
         costIceCream = 50000;
@@ -55,6 +59,7 @@ cardIceCreamElement.onclick = function () {
         costIceCream = 100000;
         costIceCreamElement.textContent = costIceCream;
         txtAT("True - 1113 CPS");
+        txtATmobile("True - 1113 CPS");
         showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:
