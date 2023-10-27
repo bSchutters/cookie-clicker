@@ -23,18 +23,18 @@
       ></div>
       <section
         id="start-modal"
-        class="hidden absolute bg-dark-prim w-3/4 h-auto p-8 rounded-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        class="absolute bg-dark-prim w-full lg:w-3/4 h-full lg:h-auto p-8 rounded-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-auto"
       >
         <div
           id="start-modal-content"
-          class="text-light-prim font-Montserrat-Regular flex flex-col gap-5"
+          class="text-light-prim font-Montserrat-Regular flex flex-col gap-5 justify-around text-sm lg:text-md h-full"
         >
           <h1 class="font-Zcool text-6xl self-center mb-5">Cody Clicker</h1>
           <input
             type="text"
             name="username"
             id="start-modal-input-username"
-            class="self-start p-2 w-3/12 rounded-xl border-2 border-dark-sec bg-dark-prim outline-none placeholder:text-dark-sec"
+            class="self-start p-2 w-4/6 lg:w-3/12 rounded-xl border-2 border-dark-sec bg-dark-prim outline-none placeholder:text-dark-sec"
             placeholder="Your Username"
           />
 
@@ -70,9 +70,10 @@
         </div>
       </section>
 
+      <!-- NOTIF -->
       <section
         id="notif"
-        class="absolute bottom-8 right-8 bg-green-notif w-[370px] h-[100px] rounded-2xl flex items-center p-5 border-2 border-transparent hover:border-2 hover:border-light-prim"
+        class="absolute right-1/2 bottom-8 translate-x-1/2 lg:bottom-8 lg:right-8 lg:translate-x-0 bg-green-notif w-[350px] h-[120px] lg:h-[100px] rounded-2xl flex items-center p-5 border-2 border-transparent hover:border-2 hover:border-light-prim"
       >
         <div>
           <p id="notif-text" class="text-light-prim">
@@ -84,14 +85,24 @@
         </div>
       </section>
 
-      <section id="left-main" class="w-fit flex flex-col gap-5 p-8">
+      <!-- LEFT SECTION -->
+      <section
+        id="left-main"
+        class="lg:static bg-dark-prim w-full lg:w-fit hidden lg:flex flex-col gap-5 p-2 lg:p-8"
+      >
         <div
           id="level-overflow"
-          class="flex flex-col gap-5 overflow-y-scroll overflow-x-hidden pr-6 pl-[2px] pt-[2px]"
+          class="flex flex-col items-center gap-5 overflow-y-scroll lg:overflow-x-hidden pr-2 lg:pr-6 lg:pl-[2px] lg:pt-[2px]"
         >
+          <div
+            id="close-lvl-menu"
+            class="hidden text-light-prim self-end text-4xl pr-2"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
           <!-- LEVEL 1 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-pizza"
           >
             <div class="flex items-center gap-5">
@@ -116,7 +127,7 @@
 
           <!-- LEVEL 2 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-burger"
           >
             <div class="flex items-center gap-5">
@@ -140,7 +151,7 @@
 
           <!-- LEVEL 3 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-coffee"
           >
             <div class="flex items-center gap-5">
@@ -164,7 +175,7 @@
 
           <!-- LEVEL 4 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-dorayaki"
           >
             <div class="flex items-center gap-5">
@@ -188,7 +199,7 @@
 
           <!-- LEVEL 5 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-fries"
           >
             <div class="flex items-center gap-5">
@@ -212,7 +223,7 @@
 
           <!-- LEVEL 6 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-HotDog"
           >
             <div class="flex items-center gap-5">
@@ -236,7 +247,7 @@
 
           <!-- LEVEL 7 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-ice"
           >
             <div class="flex items-center gap-5">
@@ -259,7 +270,7 @@
 
           <!-- LEVEL 8 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-kebab"
           >
             <div class="flex items-center gap-5">
@@ -283,7 +294,7 @@
 
           <!-- LEVEL 9 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-milk"
           >
             <div id="left-card-9" class="flex items-center gap-5">
@@ -307,7 +318,7 @@
 
           <!-- LEVEL 10 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-muffin"
           >
             <div class="flex items-center gap-5">
@@ -331,7 +342,7 @@
 
           <!-- LEVEL 11 -->
           <div
-            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="cards bg-dark-sec rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
             id="card-sandwich"
           >
             <div class="flex items-center gap-5">
@@ -355,7 +366,7 @@
 
           <!-- INACTIVE -->
           <div
-            class="bg-innactif-bg rounded-2xl flex items-center justify-between text-light-prim w-[370px] min-h-[120px] px-5"
+            class="bg-innactif-bg rounded-2xl flex items-center justify-between text-light-prim w-[350px] min-h-[120px] px-5"
           >
             <div class="flex items-center gap-5">
               <img
@@ -374,11 +385,11 @@
           </div>
         </div>
 
-        <div id="stats-notifs" class="flex items-center">
-          <!-- STATS -->
+        <!-- STATS -->
+        <div id="stats-notifs" class="hidden lg:flex items-center">
           <div
             id="card-stats"
-            class="bg-dark-sec rounded-2xl flex text-light-prim w-[370px] min-h-[120px] h-full p-5 justify-between items-center gap-2 font-Montserrat-Regular"
+            class="bg-dark-sec rounded-2xl flex text-light-prim w-[350px] min-h-[120px] h-full p-5 justify-between items-center gap-2 font-Montserrat-Regular"
           >
             <div class="flex flex-col">
               <h3>Clic: <span id="clic">0</span></h3>
@@ -393,26 +404,45 @@
         </div>
       </section>
 
+      <!-- RIGHT SECTION -->
       <section
         id="right-main"
-        class="w-full h-screen flex flex-col items-center justify-between pt-8"
+        class="w-full flex flex-col items-center justify-between pb-8 pt-8 lg:pb-0"
       >
-        <h1 id="score" class="font-Zcool text-light-prim text-8xl h-1/6">10</h1>
-        <div id="img-cody" class="h-5/6">
+        <h1
+          id="score"
+          class="font-Zcool text-light-prim text-6xl lg:text-8xl h-1/6"
+        ></h1>
+        <div
+          id="img-cody"
+          class="flex items-center justify-center h-full max-w-[330px] lg:max-w-none lg:h-5/6"
+        >
           <img
-            class="h-full w-auto"
+            class="self-end lg:h-full lg:w-auto"
             id="cody"
             src="./assets/images/Cody3D/png/Sleep-Cody_3D.png"
             alt=""
           />
         </div>
+        <!-- STATS -->
+        <div id="stats-notifs" class="flex items-center h-1/6 lg:hidden">
+          <div
+            id="card-stats-mobile"
+            class="flex bg-dark-sec rounded-2xl text-light-prim w-[350px] min-h-[120px] h-full p-5 justify-between items-center gap-2 font-Montserrat-Regular"
+          >
+            <div class="flex flex-col">
+              <h3>Clic: <span id="clic-mobile">0</span></h3>
+              <h3>Auto Clic: <span id="auto-clic-mobile">False</span></h3>
+              <h3>Bonus: <span id="bonus-mobile">?</span></h3>
+            </div>
+            <div id="icons" class="flex flex-col justify-between h-full">
+              <i id="icon-burger-mobile" class="fa-solid fa-bars"></i>
+              <i id="info-rules-mobile" class="fa-solid fa-circle-info"></i>
+              <i id="reset-mobile" class="fa-regular fa-trash-can"></i>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
-    <!-- BTN COUNTER -->
-    <div class="hidden">
-      <div class="card">
-        <button id="counter" type="button"></button>
-      </div>
-    </div>
   </body>
 </html>
