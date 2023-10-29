@@ -102,7 +102,37 @@ subscribe(getLvlAndCostValues);
 // Récupérez la chaîne JSON du localStorage
 const storedData = localStorage.getItem("rankLvlCostValues");
 
-// Récupérez les éléments HTML correspondants
+
+// Récupérez la chaîne JSON du localStorage
+if (storedData !== null) {
+  // 1 Désérialisez la chaîne JSON en un objet JavaScript
+  const rankLvlCostValues = JSON.parse(storedData);
+
+  // 2 Utilisez l'objet pour mettre à jour les éléments HTML correspondants
+  const rankLvlElements = document.getElementsByClassName("rank");
+  const costElements = document.getElementsByClassName("cost");
+
+  for (let i = 0; i < rankLvlElements.length; i++) {
+    if (rankLvlCostValues[`rank${i}`]) {
+      rankLvlElements[i].textContent = rankLvlCostValues[`rank${i}`];
+    }
+    if (rankLvlCostValues[`cost${i}`]) {
+      costElements[i].textContent = rankLvlCostValues[`cost${i}`];
+    }
+  }
+}
+
+// Abonnez le composant à l'état
+subscribe(scoreComponent);
+
+// Récupérer le score depuis le localStorage s'il existe
+if (storedScore !== null) {
+  updateState({ score: parseInt(storedScore, 10) });
+} else {
+  // Si le score n'existe pas dans le localStorage, initialisez-le
+  updateState({ score: 100000000000000 });
+}
+
 
 if (storedData !== null) {
     // 1 Désérialisez la chaîne JSON en un objet JavaScript
