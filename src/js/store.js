@@ -2,6 +2,12 @@
 
 // Var global pour élément HTML
 export const scoreElement = document.getElementById("score");
+export const codyImage = document.getElementById("cody");
+export const userName = document.getElementById("start-modal-input-username");
+export const startModal = document.getElementById("start-modal");
+export const btnStartModal = document.getElementById("btn-start-modal");
+export const overlayStartModal = document.getElementById("overlay");
+export const notif = document.getElementById("notif");
 
 const ATRate = document.getElementById("auto-clic"); // Élément pour afficher l'état de l'autoclicker
 const ATRatemobile = document.getElementById("auto-clic-mobile"); // Élément pour afficher l'état de l'autoclicker-mobile
@@ -142,7 +148,6 @@ export function updateClicValueTextMobile() {
 }
 
 export { updateClicValueText };
-
 //notification
 
 const notif = document.getElementById("notif");
