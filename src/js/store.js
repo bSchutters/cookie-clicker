@@ -20,8 +20,6 @@ export function setAutoClickValue(newValue) {
   autoClickValue = newValue;
 }
 
-export const codyImage = document.getElementById("cody");
-
 // Définition du store
 const state = {
   score: 0,
