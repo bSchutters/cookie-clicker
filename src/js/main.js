@@ -125,7 +125,7 @@ if (storedScore !== null) {
   updateState({ score: parseInt(storedScore, 10) });
 } else {
   // Si le score n'existe pas dans le localStorage, initialisez-le
-  updateState({ score: 10 });
+  updateState({ score: 100000000000000 });
 }
 
 if (storedData !== null) {
