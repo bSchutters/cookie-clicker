@@ -148,7 +148,7 @@ export function updateClicValueTextMobile() {
 export { updateClicValueText };
 //notification
 
-const notif = document.getElementById("notif");
+// const notif = document.getElementById("notif");
 const notifText = document.getElementById("notif-text"); // Cibler l'élément avec l'ID "notif-text"
 
 export function showNotification(message) {

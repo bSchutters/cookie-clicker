@@ -13,6 +13,7 @@ import {
   overlayStartModal,
   startModal,
   notif,
+  updateClicValueText,
 } from "./store.js";
 
 import "./lvl1.js"; // Importez le niveau 1
