@@ -9,13 +9,12 @@ import {
   getClicValue,
   autoClickValue,
   activateAutoClicker,
-  txtAT,
-  txtATmobile,
   updateClicValueText,
   updateCostTextColor,
   itemsToWatch,
   updateCostColors,
   showNotification,
+  updateAutoClickValueTextMobile,
   updateClicValueTextMobile,
 } from "./store.js";
 import codyLvl3 from "../assets/images/Cody3D/png/Angry-Cody_3D.png";
@@ -49,6 +48,8 @@ cardCoffeeElement.onclick = function () {
     updateClicValueText();
     updateCostColors();
     updateClicValueTextMobile();
+    updateAutoClickValueText();
+    updateAutoClickValueTextMobile();
 
     switch (lvlCoffee) {
       case 1:
@@ -60,8 +61,6 @@ cardCoffeeElement.onclick = function () {
         costCoffee = 1000;
         costCoffeeElement.textContent = costCoffee;
         setInterval(autoClicker, 1000);
-        txtAT("True - 1 CPS");
-        txtATmobile("True - 1 CPS");
         showNotification("Vous avez debloquer, l'autoclicker !");
         break;
       case 3:

@@ -7,14 +7,14 @@ import {
   codyImage,
   setAutoClickValue,
   autoClickValue,
-  txtAT,
-  txtATmobile,
   updateClicValueText,
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
   showNotification,
   updateClicValueTextMobile,
+  updateAutoClickValueTextMobile,
+  updateAutoClickValueText,
 } from "./store.js";
 import codyLvl5 from "../assets/images/Cody3D/png/Surprised-Cody_3D.png";
 
@@ -50,6 +50,8 @@ cardFriesElement.onclick = function () {
     updateClicValueText();
     updateCostColors();
     updateClicValueTextMobile();
+    updateAutoClickValueText();
+    updateAutoClickValueTextMobile();
 
     switch (lvlFries) {
       case 1:
@@ -59,8 +61,6 @@ cardFriesElement.onclick = function () {
       case 2:
         costFries = 10000;
         costFriesElement.textContent = costFries;
-        txtAT("True - 13 CPS");
-        txtATmobile("True - 13 CPS");
         showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:

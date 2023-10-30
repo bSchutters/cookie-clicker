@@ -65,10 +65,10 @@ const storedScore = localStorage.getItem("score");
 
 // Récupérer le score depuis le localStorage s'il existe
 if (storedScore !== null) {
-  updateState({ score: parseInt(storedScore, 10) });
+  updateState({ score: parseInt(storedScore, 1000000) });
 } else {
   // Si le score n'existe pas dans le localStorage, initialisez-le
-  updateState({ score: 10 });
+  updateState({ score: 10000000 });
 }
 
 // Composant qui affiche et garde les bonus
@@ -123,10 +123,10 @@ subscribe(scoreComponent);
 
 // Récupérer le score depuis le localStorage s'il existe
 if (storedScore !== null) {
-  updateState({ score: parseInt(storedScore, 10) });
+  updateState({ score: parseInt(storedScore, 10000000) });
 } else {
   // Si le score n'existe pas dans le localStorage, initialisez-le
-  updateState({ score: 10 });
+  updateState({ score: 1000000 });
 }
 
 if (storedData !== null) {

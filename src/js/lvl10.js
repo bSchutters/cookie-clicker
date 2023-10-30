@@ -15,6 +15,8 @@ import {
   itemsToWatch,
   showNotification,
   updateClicValueTextMobile,
+  updateAutoClickValueText,
+  updateAutoClickValueTextMobile,
 } from "./store.js";
 import codyLvl10 from "../assets/images/Cody3D/png/Wink-Cody_3D.png";
 
@@ -49,6 +51,8 @@ cardMuffinElement.onclick = function () {
     updateClicValueText();
     updateCostColors();
     updateClicValueTextMobile();
+    updateAutoClickValueText();
+    updateAutoClickValueTextMobile();
 
     switch (lvlMuffin) {
       case 1:
@@ -58,8 +62,6 @@ cardMuffinElement.onclick = function () {
       case 2:
         costMuffin = 10000000;
         costMuffinElement.textContent = costMuffin;
-        txtAT("True - 113613 CPS");
-        txtATmobile("True - 113613 CPS");
         showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:

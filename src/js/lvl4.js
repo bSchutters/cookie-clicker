@@ -11,14 +11,13 @@ import {
   activateAutoClicker,
   deactivateAutoClicker,
   setAutoClickValue,
-  txtAT,
-  txtATmobile,
   updateClicValueText,
   updateCostTextColor,
   updateCostColors,
   itemsToWatch,
   showNotification,
   updateClicValueTextMobile,
+  updateAutoClickValueTextMobile,
 } from "./store.js";
 import codyLvl4 from "../assets/images/Cody3D/png/Devil-Cody_3D.png";
 
@@ -54,6 +53,8 @@ cardDorayakiElement.onclick = function () {
     updateClicValueText();
     updateCostColors();
     updateClicValueTextMobile();
+    updateAutoClickValueText();
+    updateAutoClickValueTextMobile();
 
     switch (lvlDorayaki) {
       case 1:
@@ -65,8 +66,6 @@ cardDorayakiElement.onclick = function () {
         costDorayaki = 2000;
         costDorayakiElement.textContent = costDorayaki;
         showNotification("Amélioration de l'autoclicker !");
-        txtAT("True - 3 CPS");
-        txtATmobile("True - 3 CPS");
         break;
       case 3:
         costDorayaki = 4000;

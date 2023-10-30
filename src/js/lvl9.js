@@ -15,6 +15,8 @@ import {
   itemsToWatch,
   showNotification,
   updateClicValueTextMobile,
+  updateAutoClickValueText,
+  updateAutoClickValueTextMobile,
 } from "./store.js";
 import codyLvl9 from "../assets/images/Cody3D/png/Laugh-Cody_3D.png";
 
@@ -49,6 +51,8 @@ cardMilkElement.onclick = function () {
     updateClicValueText();
     updateCostColors();
     updateClicValueTextMobile();
+    updateAutoClickValueText();
+    updateAutoClickValueTextMobile();
 
     switch (lvlMilk) {
       case 1:
@@ -58,8 +62,6 @@ cardMilkElement.onclick = function () {
       case 2:
         costMilk = 2000000;
         costMilkElement.textContent = costMilk;
-        txtAT("True - 13613 CPS");
-        txtATmobile("True - 13613 CPS");
         showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:

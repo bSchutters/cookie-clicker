@@ -15,6 +15,8 @@ import {
   updateCostColors,
   showNotification,
   updateClicValueTextMobile,
+  updateAutoClickValueTextMobile,
+  updateAutoClickValueText,
 } from "./store.js";
 import codyLvl8 from "../assets/images/Cody3D/png/Smile-Cody_3D.png";
 
@@ -49,6 +51,8 @@ cardKebabElement.onclick = function () {
     updateClicValueText();
     updateCostColors();
     updateClicValueTextMobile();
+    updateAutoClickValueText();
+    updateAutoClickValueTextMobile();
 
     switch (lvlKebab) {
       case 1:
@@ -58,8 +62,6 @@ cardKebabElement.onclick = function () {
       case 2:
         costKebab = 400000;
         costKebabElement.textContent = costKebab;
-        txtAT("True - 3613 CPS");
-        txtATmobile("True - 3613 CPS");
         showNotification("Amélioration de l'autoclicker !");
         break;
       case 3:

@@ -9,9 +9,6 @@ export const btnStartModal = document.getElementById("btn-start-modal");
 export const overlayStartModal = document.getElementById("overlay");
 export const notif = document.getElementById("notif");
 
-const ATRate = document.getElementById("auto-clic"); // Élément pour afficher l'état de l'autoclicker
-const ATRatemobile = document.getElementById("auto-clic-mobile"); // Élément pour afficher l'état de l'autoclicker-mobile
-
 // État de l'autoclicker et valeur de l'autoclick
 export let autoClickerActive = false;
 export let autoClickValue = 1;
@@ -148,7 +145,6 @@ export function updateClicValueTextMobile() {
 export { updateClicValueText };
 //notification
 
-// const notif = document.getElementById("notif");
 const notifText = document.getElementById("notif-text"); // Cibler l'élément avec l'ID "notif-text"
 
 export function showNotification(message) {
@@ -159,3 +155,16 @@ export function showNotification(message) {
 notif.onclick = function () {
   notif.classList.add("hidden");
 };
+
+const autoClickValueElement = document.getElementById("auto-clic"); // you need to add this element to your HTML
+const autoClickValueElementMobile = document.getElementById("auto-clic-mobile"); // assuming you want one for mobile too
+
+export function updateAutoClickValueText() {
+  const currentAutoClickValue = autoClickValue;
+  autoClickValueElement.textContent = `${currentAutoClickValue}`;
+}
+
+export function updateAutoClickValueTextMobile() {
+  const currentAutoClickValue = autoClickValue;
+  autoClickValueElementMobile.textContent = `${currentAutoClickValue}`;
+}
